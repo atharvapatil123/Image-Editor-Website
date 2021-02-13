@@ -1,0 +1,50 @@
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 300%;
+    /* height: 500px; */
+    margin: 0px;
+    left: 0;
+    animation: 10s slider infinite;
+}
+#slider figure image{
+    width: 100%;
+    float: left;
+}
+ @keyframes slider{
+    0% {
+        left: 0;
+    }
+    /* 20%{
+        left: -50%;
+    } */
+    /* 30%{
+        right: 150%;
+    }
+    45%{
+        left: -45%;
+    }  */
+    /* 40%{
+        left: -100%;
+    } */
+    50%{
+        left: -300%;
+    }
+    /* 60%{
+        left: -10%;
+    } */
+    /* 70%{
+        left: -150%;
+    } */
+    /* 80%{
+        left: -100%;
+    } */
+    /* 90%{
+        left: -150%;
+    }  */
+    100%{
+        left: -500%;
+    }
+} 
