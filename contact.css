@@ -5,6 +5,8 @@ body{
     margin-top: 20px;
     text-align: center;
     align-items: center;
+    background-color: black;
+    color: white;
 }
 
 
@@ -112,7 +114,17 @@ input[type=text],input[type=number],input[type=email], select, textarea {
     margin-bottom: 5px;
 }
 
-/* .lab{
-    color: rgb(20, 225, 240);
-    font-size: 15px;
-} */
+.lab{
+    /* color: rgb(20, 225, 240); */
+    font-size: 17px;
+}
+
+  .center{
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+    /* sdfkj */
+  }
