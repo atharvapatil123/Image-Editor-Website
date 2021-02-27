@@ -1,5 +1,11 @@
-body{
+/* body{
+    background-color: black;
+} */
+.container{
     background-color: pink;
+    background-size: cover;
+    /* margin-left: 0;
+    margin-right: 0; */
 }
 #getintouch{
     margin-top: 20px;
@@ -45,7 +51,7 @@ body{
 }
 
 input[type=submit] {
-    background-color: rgb(20, 225, 240);
+    background-color: rgb(14, 148, 158);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -75,7 +81,7 @@ input[type=text],input[type=number],input[type=email], select, textarea {
 .icon{
     min-width: 60px;
     height: 60px;
-    background: #fff;
+    background:  rgb(5, 121, 129);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,12 +125,45 @@ input[type=text],input[type=number],input[type=email], select, textarea {
     font-size: 17px;
 }
 
+input[type="submit"]{
+    padding-bottom: 10px;
+}
   .center{
     text-align: center;
-    background-color: white;
-    color: black;
+    font-size: larger;
+    background-color: black;
+    color: white;
     padding: 5px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     width: 100%;
     /* sdfkj */
+  }
+  .contact{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+  }
+  .center{
+    /* margin: 20px; */
+    border-top: 2px solid white;
+  }
+  .contact li a{
+    color: white;
+    font-size: larger;
+    padding: 10px;
+    margin: 10px;
+  }
+  .contact li img{
+      width: 30%;
+      height: 20%;
+      size: 10%;
+      /* display: inline-block; */
+      padding: 0px;
+      margin: 0px;
+  }
+  .contact li{
+      width: 10%;
   }
