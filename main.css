@@ -9,7 +9,12 @@ html{
 	font-family: "Roboto Cn", sans-serif;
 }
 body{
-	background: url(//pub-static.haozhaopian.net/static/web/site/aboutus/images/header47c3419….jpg) no-repeat center;    
+	/* background: url(//pub-static.haozhaopian.net/static/web/site/aboutus/images/header47c3419….jpg) no-repeat center;     */
+	background: black;
+		position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 a{
@@ -31,10 +36,11 @@ header{
 	padding-left: 10px;
 }
 .container{
-	max-width: 150rem;
-	/* width: 90%; */
+	max-width: 175rem;
+	width: 100%;
 	margin: 0 auto;
 	padding-right: 20px;
+	background-color: pink;
 }
 
 nav{
@@ -54,7 +60,8 @@ nav{
 	transform: translateX(-100rem);
     animation: slideIn .750s forwards;
 	color: rgb(146, 13, 69);
-    margin-right: 200px;	
+    margin-right: 200px;
+	left:-150px;	
 }
 
 .brand span{
@@ -147,11 +154,7 @@ nav ul li a:hover::after{
 }
 
 .wrapper{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background: black;
+	
 	/* linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgb(148, 6, 30) 3%,  pink 100% ); */
 }
 

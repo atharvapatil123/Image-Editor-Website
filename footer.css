@@ -1,0 +1,54 @@
+.center{
+    text-align: center;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    /* margin-top: 10px; */
+    width: 100%;
+    /* sdfkj */
+  }
+  .contact{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+  }
+  .center{
+    /* margin: 20px; */
+    /* border-top: 2px solid white; */
+
+    height: 150px;
+  }
+  .center div{
+      margin: 20px;
+      font-size: larger;
+  }
+  .contact li a{
+    color: white;
+    font-size: larger;
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+  .center #space li{
+      /* margin-top: 5px; */
+    border-top: 2px solid white;
+  }
+  .contact li img{
+      width: 50%;
+      height: 20%;
+      /* size: 10%; */
+      /* display: inline-block; */
+      padding: 0px;
+      /* padding-bottom: 10px; */
+      margin-top: 10px;
+  }
+  #linkedin, #github, #facebook{
+    width: 37%;
+    padding-bottom: 1px;
+  }
+  .contact li{
+      width: 8%;
+  }

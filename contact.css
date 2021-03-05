@@ -81,7 +81,8 @@ input[type=text],input[type=number],input[type=email], select, textarea {
 .icon{
     min-width: 60px;
     height: 60px;
-    background:  rgb(5, 121, 129);
+    background:  rgb(243, 243, 243);
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +129,7 @@ input[type=text],input[type=number],input[type=email], select, textarea {
 input[type="submit"]{
     padding-bottom: 10px;
 }
-  .center{
+.center{
     text-align: center;
     font-size: larger;
     background-color: black;
@@ -163,6 +164,7 @@ input[type="submit"]{
     margin-bottom: 50px;
   }
   .center #space li{
+      /* margin-top: 5px; */
     border-top: 2px solid white;
   }
   .contact li img{
@@ -181,3 +183,4 @@ input[type="submit"]{
   .contact li{
       width: 8%;
   }
+
