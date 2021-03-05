@@ -10,13 +10,8 @@ html{
 }
 body{
 	/* background: url(//pub-static.haozhaopian.net/static/web/site/aboutus/images/header47c3419….jpg) no-repeat center;     */
-	background: black;
-		position: absolute;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
 
+}
 a{
 	text-decoration: none;
 	color: rgb(56, 5, 29);
@@ -61,7 +56,7 @@ nav{
     animation: slideIn .750s forwards;
 	color: rgb(146, 13, 69);
     margin-right: 200px;
-	left:-150px;	
+	left: -100px;	
 }
 
 .brand span{
@@ -154,7 +149,11 @@ nav ul li a:hover::after{
 }
 
 .wrapper{
-	
+	background: black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	/* linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgb(148, 6, 30) 3%,  pink 100% ); */
 }
 
