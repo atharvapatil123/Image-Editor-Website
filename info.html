@@ -19,14 +19,12 @@
             flex-direction: column;
             width: 1300px;
             margin: 50px auto;
+            background-image: radial-gradient(  rgb(249, 249, 250), rgb(255, 74, 174));
             /* padding: 50px; */
             border: 5px solid palevioletred;
             border-radius: 80px;
-        }
-        .super img{
-            margin-right: 50px;
-            margin-left: 50px;
-            width: 30%;
+            position: relative;
+            z-index: 100;
         }
         .super p{
             font-size: 20px;
@@ -37,36 +35,101 @@
             padding-left: 150px;
         }
         .child1{
-            background-color: rgb(245, 217, 222);
+            /* background-color: rgb(245, 217, 222); */
             padding-left: 50px;
             display: flex;
             justify-content:space-evenly;
             align-items: center;
+            margin-bottom: 100px;
         }
         .child1 p{
-            padding-right: 30px;
+            padding-right: 100px;
+            /* padding-left: 50px; */
+            margin-left: 450px;
+            margin-top: 100px;
+        }
+        .child1 .image1{
+            /* position:relative; */
+            /* width:9%; */
+            padding: 80px;
+            padding-left: 0;
+            margin-bottom: 150px;
         }
         .child1 img{
+            margin: 40px 10px;
+            animation-name: trans1 ;
+            position: absolute;
             width: 40%;
-            margin: 20px 0px;
+            height:280px;
+            object-fit: cover;
+            top: 0;
         }
+        .child1 #i2{
+            animation-name: i2;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            border: 5px solid rgb(233, 59, 88);
+            border-radius: 10%;
+        }
+        @keyframes i2{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        } 
         .child2{
-            background-color: pink;
+            /* background-color: pink; */
             padding: 10px;
             display: flex;
             justify-content:space-evenly;
             align-items: center;
+            margin-bottom: 150px;
+            margin-top: 100px;
         }
         .child2 p{
+            position: relative;
+            margin-top: 50px;
+            padding-top: 10px;
             padding-left: 50px;
-            padding-right: 100px;
+            padding-right: 650px;
+        }
+        .child2 .image2{
+            padding: 10px;
         }
         .child2 img{
-            width: 240%;
-            margin-left: 20px;
+            margin: 40px 10px;
+            animation-name: trans1 ;
+            position: absolute;
+            display: inline-block;
+            width: 35%;
+            height:300px;
+            object-fit:cover;
+            top: 320px;
+            right: 50px;
         }
+        .child2 #i4{
+            animation-name: i4;
+            animation-timing-function:ease-out;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            border: 5px solid rgb(233, 59, 88);
+            border-radius: 10%;
+        }
+        @keyframes i4{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        } 
         .child3{
-            background-color: rgb(245, 217, 222);
+            /* background-color: rgb(245, 217, 222); */
             padding: 10px;
             display: flex;
             justify-content:space-evenly;
@@ -115,12 +178,20 @@
         
         <div class="super">
             <div class="child1">
-                <img src="images/nature1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi sunt cumque voluptatem officia doloremque sit enim! Quia provident rem nesciunt aliquid eum aut molestiae corporis fugit nam natus nisi architecto modi itaque a suscipit, laudantium eligendi possimus quam! In, non accusantium nesciunt unde deleniti asperiores ea velit assumenda quia!</p>
+                <div class="image2">
+                    <img id="i1" src="images/EDITS/Flowers.png" alt="" style="border: 5px solid pink;
+                    border-radius: 10%;">
+                    <img id="i2" src="images/EDITS/Inverse-Flowers.png" alt="">
+                </div>
+                <p>This utility takes an image of any format and inverts the colors in it.</p>
             </div>
             <div class="child2">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi sunt cumque voluptatem officia doloremque sit enim! Quia provident rem nesciunt aliquid eum aut molestiae corporis fugit nam natus nisi architecto modi itaque a suscipit, laudantium eligendi possimus quam! In, non accusantium nesciunt unde deleniti asperiores ea velit assumenda quia!</p>
-                <img src="images/nature2.jpg" alt="">
+                <div class="image1">
+                    <img id="i3" src="images/EDITS/Man.png" alt="" style="border: 5px solid pink;
+                    border-radius: 10%;">
+                    <img id="i4" src="images/EDITS/Grey-Man.png" alt="">
+                </div>
             </div>
             <div class="child3">
                 <img src="images/snow_throw.jpg" alt="">
