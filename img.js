@@ -152,6 +152,7 @@ function clear() {
 }
 
 function reset() {
+    
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();
         var y = pixel.getY();

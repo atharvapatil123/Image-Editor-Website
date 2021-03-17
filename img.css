@@ -1,27 +1,35 @@
 canvas {
     border: 10px solid rgb(16, 114, 243);
-    width: 950px;
+    width: 900px;
     background-color: white;
     height: 600px;
     display: inline-block;
     object-fit: contain;
     border-radius: 10px;
-    /* margin-left: 300px; */
-    margin-top: 80px;
+    margin-left: 80px;
+    /* margin-right: 30px; */
+    /* margin-top: 8px; */
 }
 
-input {
-    margin-left: 30px;
+.bigcont{
+    display: flex;
+    color: rgb(255, 255, 255);
 }
+
+/* input {
+    margin-left: 30px;
+} */
 body{
-    
+    /* display: flex; */
     background-color: black;
 }
 .btn{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-right: 50px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 180px; */
+    padding-right: 10px;
+    /* margin-right: 20px; */
     float: left;
 }
 input{
@@ -31,8 +39,8 @@ input{
 .slideContainer{
     width: 75%;
     margin-bottom: 0px;
-    /* margin-left: 50px; */
-    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 .slideContainer p{
     margin-top: 10px;
