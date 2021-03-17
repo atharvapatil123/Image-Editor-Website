@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="img.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <canvas id="can"></canvas>
+    <div class="btn">
+    <div class="slideContainer">
+        <input type="range" min=1 max="100" value="0" step="1" onmousemove="applyRed()" onchange="applyRed()" id="myRange1" class="slider">
+        <p>Warm: <span id="value1"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyBlue()" onchange="applyBlue()" id="myRange2" class="slider">
+        <p>Cool: <span id="value3"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyGreen()" onchange="applyGreen()" id="myRange3" class="slider">
+        <p>Emerald: <span id="value2"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyGray()" onchange="applyGray()" id="myRange4" class="slider">
+        <p>GrayScale: <span id="value4"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onmousemove="contrast()" onchange="contrast()"id="myRange5" class="slider">
+        <p>Contrast: <span id="value5"></span></p>
+        <!-- <input type="range" min=1 max="100" value="1" step="1" onchange="applyFilter()" data-filter="contrast()" data-scale="%" id="myRange6" class="slider">
+        <p>Value: <span id="value6"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onchange="applyFilter()" data-filter="invert()" data-scale="%" id="myRange7" class="slider">
+        <p>Value: <span id="value7"></span></p>
+        <input type="range" min=1 max="100" value="1" step="1" onchange="applyFilter()" data-filter="saturate()" data-scale="%" id="myRange8" class="slider">
+        <p>Value: <span id="value8"></span></p> -->
+        <!-- <input id="gray" type="button" value="gray" onclick="gray()"> -->
+    </div>
+    <!-- <input type="button" value="red" onclick="red()"> -->
+    <!-- <input type="button" value="blue" onclick="blue()"> -->
+    <!-- <input type="button" value="green" onclick="green()"> -->
+    <input type="button" value="bright" onclick="applyBright()">
+    <!-- <input type="button" value="contrast" onclick="contrast()"> -->
+    <!-- <input type="button" value="invert" onclick="invert()"> -->
+
+    <!-- <input type="button" value="saturate" onclick="saturate()"> -->
+
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()">
+    <input type="reset" value="reset" onclick="reset()">
+    <input type="button" value="clearCanvas" onclick="location.reload();">
+    <input type="button" value="download" onclick="download()">
+
+    </div>
+
+</body>
+<script src="img.js"></script>
+</html>

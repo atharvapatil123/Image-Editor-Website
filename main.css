@@ -6,7 +6,10 @@
 
 html{
 	font-size: 12px;
-	font-family: "Roboto Cn", sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	/* font-family: 'Cairo', sans-serif; */
+	/* font-family: 'Assistant', sans-serif; */
+	font-family: 'Reggae One', cursive;
 }
 body{
 	/* background: url(//pub-static.haozhaopian.net/static/web/site/aboutus/images/header47c3419….jpg) no-repeat center;     */
