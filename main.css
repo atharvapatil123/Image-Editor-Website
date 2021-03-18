@@ -153,14 +153,14 @@ nav ul li a:hover::after{
 	}
 }
 
-.wrapper{
+ /* .wrapper{
 	background: black;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/* overflow: hidden; */
-	/* linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgb(148, 6, 30) 3%,  pink 100% ); */
-}
+	overflow: hidden; 
+	linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgb(148, 6, 30) 3%,  pink 100% );
+}  */
 
 /* h2{
 	font-family: serif;
@@ -174,8 +174,156 @@ nav ul li a:hover::after{
 	text-transform: uppercase;
 	margin: 0;
 } */
+
+.center{
+    text-align: center;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    /* margin-top: 10px; */
+    width: 100%;
+    /* sdfkj */
+  }
+  canvas {
+    border: 10px solid rgb(20, 225, 240);
+    width: 1100px;
+    background-color: white;
+    height: 600px;
+    /* display: inline-block; */
+    object-fit: contain;
+    border-radius: 10px;
+    margin-left: 130px;
+	position: relative;
+	z-index: 2;
+    /* margin-right: 30px; */
+    /* margin-top: 8px; */
+}
+
+.bigcont{
+    display: flex;
+    color: rgb(255, 255, 255);
+	margin-bottom: -35px;
+}
+
+/* input {
+    margin-left: 30px;
+} */
+/* body{
+    display: flex;
+    background-color: black;
+} */
+.btn{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    /* margin-bottom: 180px; */
+    padding-right: 10px;
+    /* margin-right: 20px; */
+    float: left;
+}
+button{
+	border-radius: 5px;
+}
+button:hover{
+	 background-color:  rgb(20, 225, 240);
+}
+button:active{
+	background-color: white;
+}
+input[type=range]{
+    margin: 20px;
+    width: 131%;
+}
+.slideContainer{
+    width: 75%;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.slideContainer p{
+    margin-top: 10px;
+    margin-left: 40%;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 1;
+    font-size: 18px;
+}
+.slider::after{
+    content: '100';
+    color: rgb(5, 0, 0);
+    font-size: 1.2rem;
+    position:absolute;
+    left: 20%;
+    top: 19%; 
+}
+#myRange2::after, #myRange2::before{
+    top: 35%;
+}
+#myRange3::after, #myRange3::before{
+    top: 51%;
+}
+#myRange4::after, #myRange4::before{
+    top: 67%;
+}
+#myRange5::after, #myRange5::before{
+    top: 83%;
+}
+#myRange6::after, #myRange6::before{
+    top: 99%;
+}
+#myRange7::after, #myRange7::before{
+    top: 115%;
+}
+#myRange8::after, #myRange8::before{
+    top: 131%;
+}
+.slider::before{
+    content: '0';
+    color: rgb(5, 0, 0);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 4%;
+    top: 19%;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 134%;
+    height: 14px;
+    /* background: linear-gradient(90deg, rgb(28, 184, 231) 60%, rgb(214,214,214) 60%); */
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transform: opacity 0.2s;
+    border-radius: 12px;
+    box-shadow: 0px 1px 12px 4px rgb(0, 0, 22);
+    margin-top: 29px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.reset_clear{
+    display: flex;
+    padding-left:500px;
+    margin-left: 111px;
+    width: 1275px;
+    justify-content: space-between; 
+}
 .box div{
 	position: absolute;
+	z-index: 1;
 	width: 60px;
 	height: 60px;
 	background-color: transparent;
@@ -241,16 +389,6 @@ nav ul li a:hover::after{
 		opacity: 0;
 	}
 }
-.center{
-    text-align: center;
-    font-size: larger;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    /* margin-top: 10px; */
-    width: 100%;
-    /* sdfkj */
-  }
   .contact{
       list-style: none;
       display: flex;
@@ -258,6 +396,7 @@ nav ul li a:hover::after{
       align-items: center;
       justify-content: center;
       margin: 0px;
+	  /* margin-top: 120px; */
   }
   .center{
     /* margin: 20px; */
@@ -265,10 +404,14 @@ nav ul li a:hover::after{
 
     height: 150px;
   }
-  .center div{
-      margin: 20px;
-      font-size: larger;
+  .center #space{
+	  margin-top: 150px;
+	  /* margin-bottom: 50px; */
   }
+  .center div{
+	margin: 20px;
+	font-size: larger;
+}
   .contact li a{
     color: white;
     font-size: larger;
@@ -294,3 +437,4 @@ nav ul li a:hover::after{
   .contact li{
       width: 8%;
   }
+

@@ -12,7 +12,7 @@ slider1.oninput = function() {
 
 slider1.addEventListener("mousemove",function(){
     var x = slider1.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider1.style.background = color;
 })
 var slider2 = document.getElementById("myRange2");
@@ -25,14 +25,10 @@ slider2.oninput = function() {
 }
 slider2.addEventListener("mousemove", function(){
     var x = slider2.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider2.style.background = color;
 })
-// slider2.onchange( function(){
-//     var x = slider2.value;
-//     var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
-//     slider2.style.background = color;
-// })
+
 var slider3 = document.getElementById("myRange3");
 var output3 = document.getElementById("value3");
 
@@ -44,7 +40,7 @@ slider3.oninput = function() {
 
 slider3.addEventListener("mousemove",function(){
     var x = slider3.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider3.style.background = color;
 })
 var slider4 = document.getElementById("myRange4");
@@ -58,7 +54,7 @@ slider4.oninput = function() {
 
 slider4.addEventListener("mousemove",function(){
     var x = slider4.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider4.style.background = color;
 })
 var slider5 = document.getElementById("myRange5");
@@ -72,56 +68,10 @@ slider5.oninput = function() {
 
 slider5.addEventListener("mousemove",function(){
     var x = slider5.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider5.style.background = color;
 })
-// slider5.onchange( function(){
-//     var x = slider5.value;
-//     var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
-//     slider5.style.background = color;
-// })
-var slider6 = document.getElementById("myRange6");
-var output6 = document.getElementById("value6");
 
-output6.innerHTML = slider6.value;
-
-slider6.oninput = function() {
-    output6.innerHTML = this.value;
-}
-
-slider6.addEventListener("mousemove",function(){
-    var x = slider6.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
-    slider6.style.background = color;
-})
-var slider7 = document.getElementById("myRange7");
-var output7 = document.getElementById("value7");
-
-output7.innerHTML = slider7.value;
-
-slider7.oninput = function() {
-    output7.innerHTML = this.value;
-}
-
-slider7.addEventListener("mousemove",function(){
-    var x = slider7.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
-    slider7.style.background = color;
-})
-var slider8 = document.getElementById("myRange8");
-var output8 = document.getElementById("value8");
-
-output8.innerHTML = slider8.value;
-
-slider8.oninput = function() {
-    output8.innerHTML = this.value;
-}
-
-slider8.addEventListener("mousemove",function(){
-    var x = slider8.value;
-    var color = 'linear-gradient(90deg, rgb(28, 184, 231)' + x + '%, rgb(252,252,252)' + x +'%)';
-    slider8.style.background = color;
-})
 /////////////////////////////////////////////////////////////
 
 
@@ -381,7 +331,6 @@ function applyGray() {
 
 
 function applyBright() {
-    var x5 = slider5.value;
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
@@ -389,11 +338,7 @@ function applyBright() {
         pix = resetimg.getPixel(x, y);
         p5.setPixel(x, y, pix);
     }
-    var q = x5;
-    // slider5.addEventListener("mousemove",function(){
-    //     var fileinput = document.getElementById("finput");
-    //     slider5.style.filter = "brightness(" + x5 + "%);"
-    // });
+    var q = 20;
     for (var pixel of p5.values()) {
         var r = pixel.getRed();
         var b = pixel.getBlue();
@@ -426,15 +371,22 @@ function applyBright() {
 }
 
 function contrast() {
-    var x5 = Math.floor(slider5.value/3.2);
-    var contrast = x5;
+    var x6 = Math.floor(slider5.value/3);
+    for (var pixel of resetimg.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = resetimg.getPixel(x, y);
+        p6.setPixel(x, y, pix);
+    }
+    var contrast = x6;
     var q = 30;
     var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
-    // if(x5<=1){
-    //     draww();
-    // }
-    // else{
-        for (var pixel of img.values()) {
+    if(x6==1){
+        draww();
+    }
+    else{
+        for (var pixel of p6.values()) {
             var r2 = (factor * (pixel.getRed() - q) + q);
             var b2 = (factor * (pixel.getBlue() - q) + q);
             var g2 = (factor * (pixel.getGreen() - q) + q);
@@ -443,8 +395,15 @@ function contrast() {
             pixel.setBlue(b2);
             pixel.setGreen(g2);
         }
+        for (var pixel of p6.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+    
+            pix = p6.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
         draww();
-    // }
+    }
 }
 
 function invert() {
