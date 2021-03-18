@@ -29,8 +29,10 @@
         }
         .super p{
             font-size: 20px;
-            font-family: 'Lato', sans-serif;
-            font-weight: 900;
+            /* font-family: 'Lato', sans-serif; */
+            font-family: 'Assistant', sans-serif;
+            font-size: 20px;
+            /* font-weight: 900; */
             word-spacing: 5px;
             letter-spacing: 1px;
             padding-left: 150px;
@@ -46,7 +48,7 @@
         .child1 p{
             padding-right: 100px;
             /* padding-left: 50px; */
-            margin-left: 450px;
+            margin-left: 520px;
             margin-top: 100px;
         }
         .child1 .image1{
@@ -93,10 +95,10 @@
         }
         .child2 p{
             position: relative;
-            margin-top: 50px;
+            margin-top: 30px;
             padding-top: 10px;
             padding-left: 50px;
-            padding-right: 650px;
+            padding-right: 750px;
         }
         .child2 .image2{
             padding: 10px;
@@ -106,7 +108,7 @@
             animation-name: trans1 ;
             position: absolute;
             display: inline-block;
-            width: 35%;
+            width: 40%;
             height:300px;
             object-fit:cover;
             top: 320px;
@@ -137,13 +139,40 @@
             align-items: center;
         }
         .child3 p{
-            padding-left: 80px;
-            padding-right: 10px;
+            /* padding-right: 100px; */
+            /* padding-left: 50px; */
+            margin-left: 520px;
+            margin-top: 10px;
         }
         .child3 img{
+            /* margin: 40px 10px; */
+            animation-name: trans1 ;
+            position: absolute;
+            /* margin-bottom: 150px; */
+            /* padding-bottom: 150px; */
             width: 40%;
+            height:280px;
+            object-fit: cover;
             margin-left: 50px;
+            top: 700px;
         }
+        .child3 #i6{
+            animation-name: i6;
+            animation-timing-function:ease-out;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            border: 5px solid rgb(233, 59, 88);
+            border-radius: 10%;
+        }
+        @keyframes i6{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        } 
 
     </style>
 </head>
@@ -156,7 +185,7 @@
                     <h1 class="brand">Image Editor</h1>
                     <ul>
                         <li><a href="main.html" target="/blank1"><b>Editor</b> </a></li>
-                        <li><a href="info.html" target="/blank2">Info</a></li>
+                        <li><a href="info.html" target="/blank">Info</a></li>
                         <li><a href="aboutus.html" target="/blank3">About us</a></li>
                         <li><a href="contact.html" target="/blank4">Contact us</a></li>
                     </ul>
@@ -184,19 +213,24 @@
                     border-radius: 10%;">
                     <img id="i2" src="images/EDITS/Inverse-Flowers.png" alt="">
                 </div>
-                <p>This utility takes an image of any format and inverts the colors in it.</p>
+                <p>The <b>Invert</b> utility takes an image of any format and inverts the colors in it. Black becomes white, and white becomes black, and so for all the colors. Naturally, running the process twice on an image results back to the original image.</p>
             </div>
             <div class="child2">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi sunt cumque voluptatem officia doloremque sit enim! Quia provident rem nesciunt aliquid eum aut molestiae corporis fugit nam natus nisi architecto modi itaque a suscipit, laudantium eligendi possimus quam! In, non accusantium nesciunt unde deleniti asperiores ea velit assumenda quia!</p>
+                <p> <b>GRAYSCALE</b> images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray. The contrast ranges from black at the weakest intensity to white at the strongest.</p>
                 <div class="image1">
-                    <img id="i3" src="images/EDITS/Man.png" alt="" style="border: 5px solid pink;
+                    <img id="i3" src="images/EDITS/Purple.jpeg" alt="" style="border: 5px solid pink;
                     border-radius: 10%;">
-                    <img id="i4" src="images/EDITS/Grey-Man.png" alt="">
+                    <img id="i4" src="images/EDITS/Purple-grey.png" alt="">
                 </div>
             </div>
             <div class="child3">
-                <img src="images/snow_throw.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nisi sunt cumque voluptatem officia doloremque sit enim! Quia provident rem nesciunt aliquid eum aut molestiae corporis fugit nam natus nisi architecto modi itaque a suscipit, laudantium eligendi possimus quam! In, non accusantium nesciunt unde deleniti asperiores ea velit assumenda quia!</p>
+                <div class="image3">
+                    <img id="i5" src="images/EDITS/Eyes.jpeg" alt=""
+                    style="border: 5px solid pink;
+                    border-radius: 10%;">
+                    <img id="i6" src="images/EDITS/G-Eyes.png" alt="">
+                </div>
+                <p>On applying the <b>WARM</b> filter, the rend intensity of image increases. Similarly, on application of <b>COOL</b> and <b>EMERALD</b> filter, the intensity of blue and green color increases, respectively.</p>
             </div>
         </div>
 
