@@ -22,7 +22,7 @@ a{
 
 header{
 	width: 100%;
-    height: 15vh;
+    height: 10vh;
 	display: flex;
 	background-size: cover;
 	position: relative;
@@ -38,6 +38,9 @@ header{
 .container{
 	max-width: 175rem;
 	width: 100%;
+    position: fixed;
+    z-index: 200;
+    box-shadow:rgb(248, 117, 139) 1px 2px 20px 2px;
 	margin: 0 auto;
 	padding-right: 20px;
 	background-color: pink;
@@ -152,8 +155,264 @@ nav ul li a:hover::after{
 		transform: translateX(0);
 	}
 }
+#home {
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    /* background-color: aqua; */
+}
 
+.qaz {
+    font-size: 36px;
+}
 
+.btnm {
+    width: 150px;
+    height: 5.5vh;
+    font-size: 2.2vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    padding: 8px 18px;
+    margin: 40px;
+    cursor: pointer;
+}
+.btnm:hover {
+    background-color: pink !important;
+}
+.btnm:active{
+    background-color: white !important;
+}
+
+.asd {
+    padding: 20px;
+    width: auto;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    /* background-color: aqua; */
+    justify-content:space-evenly;
+    font-family: 'Assistant', sans-serif;
+    font-size: 19px;
+    font-weight: bolder;
+}
+.asd h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#div1 {
+    padding: 20px;
+    background-image: linear-gradient(rgb(245, 118, 139),white);
+    background-color: blue;
+    border: 5px solid aqua;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    width: 20%;
+    /* margin-left: 150px; */
+}
+
+#div2 {
+    border-radius: 15px;
+    border:  5px solid aqua;
+    /* border: 1px solid black; */
+    padding: 20px;
+    background-image: linear-gradient(rgb(245, 118, 139),white);
+    width: 20%;
+    /* margin-left: 50px; */
+
+}
+
+#div3 {
+    padding: 20px;
+    border-radius: 15px;
+    border: 5px solid aqua;
+    /* border: 1px solid black; */
+    width: 20%;
+    background-image: linear-gradient(rgb(245, 118, 139),white);
+    /* background-color: rgb(114, 221, 81); */
+    /* margin-left: 50px; */
+
+}
+.icons{
+    margin-left: 90px;
+    margin-top: 20px;
+    width: 100px;
+    height:100px;
+}
+
+.super{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    width: 1667px;
+    margin: 50px auto;
+    /* background-image: radial-gradient(  rgb(249, 249, 250), rgb(255, 74, 174)); */
+    background-color:black;
+    /* padding: 50px; */
+    /* border: 5px solid palevioletred; */
+    border-radius: 80px;
+    position: relative;
+    z-index: 100;
+}
+.super p{
+    font-size: 20px;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+    /* font-weight: 900; */
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    padding-left: 150px;
+}
+.child1{
+    /* background-color: rgb(245, 217, 222); */
+    padding-left: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.child1 h2{
+    font-size: 3.1vh;
+    margin-top: 80px;
+    margin-left: 1096px;
+}
+.child1 p{
+    padding-right: 100px;
+    /* padding-left: 50px; */
+    margin-left: 816px;
+    margin-top: 50px;
+}
+.child1 .image1{
+    /* position:relative; */
+    /* width:9%; */
+    padding: 80px;
+    padding-left: 0;
+    margin-bottom: 150px;
+}
+.child1 img{
+    margin: 40px 10px;
+    margin-right: 50px;
+    animation-name: trans1 ;
+    position: absolute;
+    width: 40%;
+    height:320px;
+    object-fit: cover;
+    top: 0;
+}
+.child1 #i2{
+    animation-name: i2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes i2{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+} 
+.child2{
+    /* background-color: pink; */
+    padding: 10px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+.child2 h2{
+    margin-top: 25px;
+    margin-left: 255px;
+    font-size: 3.1vh;
+}
+.child2 p{
+    position: relative;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 1050px;
+}
+.child2 .image2{
+    padding: 10px;
+}
+.child2 img{
+    margin: 40px 10px;
+    margin-top: 150px;
+    animation-name: trans1 ;
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    height:300px;
+    object-fit:cover;
+    top: 320px;
+    right: 50px;
+}
+.child2 #i4{
+    animation-name: i4;
+    animation-timing-function:ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes i4{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+} 
+.child3{
+    /* background-color: rgb(245, 217, 222); */
+    padding: 10px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.child3 p{
+    /* padding-right: 100px; */
+    /* padding-left: 50px; */
+    margin-left: 520px;
+    margin-top: 10px;
+}
+.child3 img{
+    /* margin: 40px 10px; */
+    animation-name: trans1 ;
+    position: absolute;
+    margin-top: 150px;
+    /* padding-bottom: 150px; */
+    width: 40%;
+    height:280px;
+    object-fit: cover;
+    margin-left: 50px;
+    top: 700px;
+}
+.child3 #i6{
+    animation-name: i6;
+    animation-timing-function:ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes i6{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+} 
 .center{
     text-align: center;
     font-size: larger;

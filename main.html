@@ -54,21 +54,56 @@
 
     <div class="asd">
         <div id="div1">
-            <img class="icon" src="icon/photo.png" alt="">
-            <p>01. Upload</p>
+            <img class="icons" src="images/icon/Upload.png" alt="">
+            <h2>1. Upload</h2>
             <p>first upload the image to the canvas.Use the upload image button and choose the image you want to edit.</p>
         </div>
         <div id="div2">
-            <img class="icon" src="icon/image-editor.png" alt="">
-            <p>02. Edit</p>
+            <img class="icons" src="images/icon/image-editor.png" alt="">
+            <h2>2. Edit</h2>
             <p>To edit the image there are various editing options to the left you can reset the image as well.</p>
         </div>
         <div id="div3">
-            <img class="icon" src="icon/photod.png" alt="">
-            <p>03. Save</p>
+            <img class="icons" src="images/icon/Download.png" alt="">
+            <h2>3. Save</h2>
             <p>After editing the image click the download button to save the edited image.</p>
         </div>
     </div>
+
+    <div class="super">
+        <div class="child1">
+            <div class="image2">
+                <img id="i1" src="images/EDITS/Flowers.png" alt="" style="border: 5px solid pink;
+                border-radius: 10%;">
+                <img id="i2" src="images/EDITS/Inverse-Flowers.png" alt="">
+            </div>
+           <div class="headp">
+            <h2>Invert Image</h2>
+            <p>The <b>Invert</b> utility takes an image of any format and inverts the colors in it. Black becomes white, and white becomes black, and so for all the colors. Naturally, running the process twice on an image results back to the original image.</p>
+           </div>
+        </div>
+        <div class="child2">
+            <div class="headp">
+                <h2>GRAYSCALE</h2>
+                <p> <b>GRAYSCALE</b> images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray. The contrast ranges from black at the weakest intensity to white at the strongest.</p>
+            </div>
+            <div class="image1">
+                <img id="i3" src="images/EDITS/Purple.jpeg" alt="" style="border: 5px solid pink;
+                border-radius: 10%;">
+                <img id="i4" src="images/EDITS/Purple-grey.png" alt="">
+            </div>
+        </div>
+        <div class="child3">
+            <div class="image3">
+                <img id="i5" src="images/EDITS/Eyes.jpeg" alt=""
+                style="border: 5px solid pink;
+                border-radius: 10%;">
+                <img id="i6" src="images/EDITS/G-Eyes.png" alt="">
+            </div>
+            <p>On applying the <b>WARM</b> filter, the rend intensity of image increases. Similarly, on application of <b>COOL</b> and <b>EMERALD</b> filter, the intensity of blue and green color increases, respectively.</p>
+        </div>
+    </div>
+
     <!-- </div> -->
     <input style="width: 537px; margin-left: 610px; margin-right: 0px; margin-bottom: 30px;margin-top: 50px; font-size: 20px; letter-spacing: 1px; font-weight: 600;cursor: pointer;padding: 1px;" type="file" multiple="false" accept="image/*" id="finput" onchange="upload()">
     <!-- <input type="button" value="download" onclick="download()"> -->
