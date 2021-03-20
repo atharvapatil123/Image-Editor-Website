@@ -163,10 +163,7 @@ input[type="submit"]{
     padding: 0px;
     margin-bottom: 50px;
   }
-  .center #space li{
-      /* margin-top: 5px; */
-    border-top: 2px solid white;
-  }
+
   .contact li img{
       width: 50%;
       height: 20%;

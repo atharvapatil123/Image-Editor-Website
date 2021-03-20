@@ -44,7 +44,7 @@ header{
 	width: 100%;
     position: fixed;
     z-index: 200;
-    box-shadow:rgb(248, 117, 139) 1px 2px 20px 2px;
+    box-shadow:rgb(248, 117, 139) 1px 1px 10px 1px;
 	margin: 0 auto;
 	padding-right: 20px;
 	background-color: pink;
@@ -177,16 +177,14 @@ nav ul li a:hover::after{
     font-size: 2.2vh;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
-    padding: 8px 18px;
+    padding: 01px 18px;
     margin: 40px;
     cursor: pointer;
     color: rgb(0, 0, 0);
     border: none  !important;
     background-color: aqua;
 }
-.btnm:hover {
-    background-color: pink !important;
-}
+
 .btnm:active{
     background-color: white !important;
 }
@@ -210,7 +208,7 @@ nav ul li a:hover::after{
     padding: 20px;
     background-image: linear-gradient(rgb(245, 118, 139),white);
     background-color: blue;
-    border: 5px solid aqua;
+    border: 3px solid rgb(0, 0, 0);
     /* border: 1px solid black; */
     border-radius: 15px;
     width: 20%;
@@ -219,7 +217,7 @@ nav ul li a:hover::after{
 
 #div2 {
     border-radius: 15px;
-    border:  5px solid aqua;
+    border: 3px solid rgb(0, 0, 0);
     /* border: 1px solid black; */
     padding: 20px;
     background-image: linear-gradient(rgb(245, 118, 139),white);
@@ -231,7 +229,7 @@ nav ul li a:hover::after{
 #div3 {
     padding: 20px;
     border-radius: 15px;
-    border: 5px solid aqua;
+    border: 3px solid rgb(0, 0, 0);
     /* border: 1px solid black; */
     width: 20%;
     background-image: linear-gradient(rgb(245, 118, 139),white);
@@ -255,7 +253,7 @@ nav ul li a:hover::after{
     width: 1667px;
     margin: 50px auto;
     /* background-image: radial-gradient(  rgb(249, 249, 250), rgb(255, 74, 174)); */
-    background-color:black;
+    background-color:rgb(15, 15, 15);
     /* padding: 50px; */
     /* border: 5px solid palevioletred; */
     border-radius: 80px;
@@ -280,7 +278,7 @@ nav ul li a:hover::after{
     align-items: center;
     margin-bottom: 100px;
 }
-.child1 h2{
+.child1 h2, .child3 h2{
     font-size: 3.1vh;
     margin-top: 80px;
     margin-left: 1096px;
@@ -356,7 +354,7 @@ nav ul li a:hover::after{
     position: absolute;
     display: inline-block;
     width: 40%;
-    height:300px;
+    height:320px;
     object-fit:cover;
     top: 320px;
     right: 50px;
@@ -381,24 +379,25 @@ nav ul li a:hover::after{
 .child3{
     /* background-color: rgb(245, 217, 222); */
     padding: 10px;
+    margin-bottom: 150px;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
 }
 .child3 p{
-    /* padding-right: 100px; */
+    padding-right: 200px;
     /* padding-left: 50px; */
-    margin-left: 520px;
-    margin-top: 10px;
+    margin-left: 750px;
+    margin-top: 30px;
 }
 .child3 img{
     /* margin: 40px 10px; */
     animation-name: trans1 ;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 200px;
     /* padding-bottom: 150px; */
     width: 40%;
-    height:280px;
+    height:320px;
     object-fit: cover;
     margin-left: 50px;
     top: 700px;
@@ -429,6 +428,14 @@ nav ul li a:hover::after{
     /* margin-top: 10px; */
     width: 100%;
     /* sdfkj */
+  }
+
+  #black{
+      width: 1500px;
+      margin-bottom: 50px;
+      background-color: black;
+      visibility: none;
+      /* display: */
   }
   canvas {
     border: 10px solid rgb(20, 225, 240);
@@ -649,10 +656,7 @@ input[type=range]{
 
     height: 150px;
   }
-  .center #space{
-	  margin-top: 150px;
-	  /* margin-bottom: 50px; */
-  }
+
   .center div{
 	margin: 20px;
 	font-size: larger;
@@ -664,7 +668,7 @@ input[type=range]{
     margin-bottom: 50px;
   }
   .center #space li{
-    border-top: 2px solid white;
+    /* border-top: 2px solid white; */
   }
   .contact li img{
       width: 50%;
@@ -687,4 +691,12 @@ input[type=range]{
 	padding-bottom: 7px;
 	margin-top: 20px;
 }
+.up{
+    margin-top: 50px;
+    width: 566px;
+    margin-left: 560px;
+    border: 1px solid rgb(255 255 255);
+}
+
+
 
