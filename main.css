@@ -307,17 +307,17 @@ nav ul li a:hover::after{
     justify-content:space-evenly;
     align-items: center;
     margin-bottom: 100px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
-/* .child1 h2{
-    margin-top: 550px;
-    margin-left: 550px;
-    width: 50px;
-} */
+.child1 h2{
+    margin-top: 200px;
+    margin-left: 1000px;
+    /* width: 50px; */
+}
 .child1 p{
     padding-right: 100px;
-    margin-left: 816px;
-    margin-top: 550px;
+    margin-left: 696px;
+    margin-top: 50px;
 }
 .child1 .image1{
     padding: 80px;
@@ -326,7 +326,7 @@ nav ul li a:hover::after{
 }
 .child1 img{
     margin: 40px 10px;
-    margin-top: 1250px;
+    margin-top: 1170px;
     margin-right: 50px;
     top: 0;
 }
@@ -352,7 +352,7 @@ nav ul li a:hover::after{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 .child2 h2{
     margin-top: 25px;
@@ -364,14 +364,14 @@ nav ul li a:hover::after{
     margin-top: 30px;
     padding-top: 10px;
     padding-left: 100px;
-    padding-right: 1050px;
+    padding-right: 950px;
 }
 .child2 .image2{
     padding: 10px;
 }
 .child2 img{
     margin: 40px 10px;
-    margin-top: 700px;
+    margin-top: 600px;
     top: 1020px;
     right: 50px;
 }
@@ -401,18 +401,19 @@ nav ul li a:hover::after{
     align-items: center;
 }
 .child3 h2{
-    margin-top: 80px;
-    margin-left: 1096px;
+    margin-top: 50px;
+    margin-left: 1150px;
 }
 .child3 p{
     padding-right: 100px;
     margin-left: 816px;
+    margin-top: 30px;
 }
 .child3 img{
     animation-name: trans1 ;
     margin-top: 1500px;
     margin-left: 50px;
-    top: 700px;
+    top: 550px;
 }
 .child3 #i6{
     animation-name: i6;
@@ -431,7 +432,12 @@ nav ul li a:hover::after{
         opacity: 0;
     }
 } 
-
+.child4{
+    height: 500px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
 
 /* EDITOR SECTION */
 #black{
