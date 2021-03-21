@@ -4,8 +4,7 @@ body{
 .container{
     background-color: pink;
     background-size: cover;
-    /* margin-left: 0;
-    margin-right: 0; */
+	font-family: 'Reggae One', cursive;
 }
 #getintouch{
     margin-top: 20px;
@@ -14,7 +13,9 @@ body{
     background-color: black;
     color: white;
 }
-
+html{
+    font-family: 'Reggae One', cursive;
+}
 
 #line1{
     font-size: 40px;
@@ -188,4 +189,10 @@ input[type="submit"]{
   .contact li{
       width: 8%;
   }
+  .up{
+    margin-top: 50px;
+    width: 566px;
+    margin-left: 560px;
+    border: 1px solid rgb(255,255 ,255);
+}
 

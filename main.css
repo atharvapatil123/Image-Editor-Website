@@ -21,7 +21,7 @@ a{
 
 /* NAVBAR */
 .pahila{
-    background-image: url('/images/colourful5.jpg');
+    background-image: url('images/colourful5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -394,7 +394,7 @@ nav ul li a:hover::after{
 } 
 .child3{
     padding: 10px;
-    margin-top: 200px;
+    margin-top: 220px;
     margin-bottom: 150px;
     display: flex;
     justify-content:space-evenly;
@@ -411,12 +411,37 @@ nav ul li a:hover::after{
 }
 .child3 img{
     animation-name: trans1 ;
-    margin-top: 1500px;
+    margin-top: 1550px;
     margin-left: 50px;
     top: 550px;
 }
-.child3 #i6{
-    animation-name: i6;
+.child3 .image3{
+    display: none;
+    border: 5px solid pink;
+    border-radius: 10%;
+}
+.child4{
+    height: 500px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.child4 h2{
+    margin-left: -680px;
+}
+.child4 p{
+     margin-left: -1050px;
+     padding-right: 1000px;
+     padding-left: 205px;
+     margin-top: 30px;
+}
+.child4 .image4{
+    margin-bottom: 250px;
+    margin-left: 950px;
+    margin-top: -100px;
+}
+.child4 #i8{
+    animation-name: i8;
     animation-timing-function:ease-out;
     animation-iteration-count: infinite;
     animation-duration: 10s;
@@ -424,7 +449,7 @@ nav ul li a:hover::after{
     border: 5px solid rgb(233, 59, 88);
     border-radius: 10%;
 }
-@keyframes i6{
+@keyframes i8{
     0%{
         opacity: 1;
     }
@@ -432,16 +457,16 @@ nav ul li a:hover::after{
         opacity: 0;
     }
 } 
-.child4{
-    height: 500px;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-}
+
+
+
+
+
 
 /* EDITOR SECTION */
 #black{
     width: 1500px;
+    height: 30px;
     margin-bottom: 50px;
     background-color: black;
 }
@@ -526,6 +551,8 @@ input[type=range]{
     margin-left: 111px;
     width: 1275px;
     justify-content: space-between; 
+    margin-bottom: 100px;
+    margin-top: -50px;
 }
 
 
