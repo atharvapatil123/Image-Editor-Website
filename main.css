@@ -37,6 +37,7 @@ header{
 }
 #pic{
 	padding-left: 10px;
+    margin-left: 10px;
 }
 .container{
 	max-width: 175rem;
@@ -63,7 +64,7 @@ nav{
 	transform: translateX(-100rem);
     animation: slideIn .750s forwards;
 	color: rgb(146, 13, 69);
-    margin-right: 515px;
+    margin-right: 655px;
 }
 .brand span{
 	color: crimson;
