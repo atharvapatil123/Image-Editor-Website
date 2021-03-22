@@ -82,18 +82,19 @@ nav ul li{
 	list-style: none;
 	transform: translateX(100rem);
 	animation: slideIn .5s forwards;
+    margin-right: 20px;
+}
+nav ul li:hover{
+    font-weight: bold;
+}
+nav img:nth-child(1){
+	animation-delay: .1s;
 }
 nav ul li:nth-child(2){
 	animation-delay: .5s;
 }
 nav ul li:nth-child(3){
 	animation-delay: 1s;
-}
-nav ul li:nth-child(4){
-	animation-delay: 1.5s;
-}
-nav img:nth-child(1){
-	animation-delay: .1s;
 }
 nav ul li a{
 	padding: 1rem 0;
@@ -103,29 +104,6 @@ nav ul li a{
 }
 nav ul li a:last-child{
 	margin-right: 0;
-}
-nav ul li a::before,
-nav ul li a::after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 3px;
-	background-color: rgb(77, 14, 14);
-	left: 0;
-	transform: scaleX(0);
-	transition: all .4s;
-}
-nav ul li a::before{
-	top: 0;
-	transform-origin: right;
-}
-nav ul li a::after{
-	bottom: 0;
-	transform-origin:left;
-}
-nav ul li a:hover::before,
-nav ul li a:hover::after{
-	transform: scaleX(1);
 }
 @keyframes slideIn {
 	from{
@@ -234,6 +212,7 @@ nav ul li a:hover::after{
     height:320px;
     object-fit: cover;
     position: absolute;
+    z-index: 150;
 }
 .super h2{
     font-size: 3.1vh;
@@ -248,7 +227,7 @@ nav ul li a:hover::after{
 }
 #main img{
     left: 50px;
-    top: 280px;
+    top: 230px;
     border: 5px solid rgb(233, 59, 88);
     border-radius: 10%;
 }
@@ -263,27 +242,28 @@ nav ul li a:hover::after{
     border: 1px solid white;
 }
 #main p{
-    margin-left: 856px;
-    margin-top: 217px;
-    padding-right: 200px;
+    margin-left: 796px;
+    margin-top: 247px;
+    padding-right: 150px;
     /* padding-left: 100px; */
 }
 .child0{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    margin-top: -80px;
 }
 .child0 h2{
     margin-left: 350px;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 .child0 p{
     margin-right: 955px;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 .child0 img{
     margin-left: 950px;
-    margin-top: -50px;
+    margin-top: 0px;
 }
 .child0 #i0{
     animation-name: i0;
@@ -402,7 +382,7 @@ nav ul li a:hover::after{
     align-items: center;
 }
 .child3 h2{
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: 1150px;
 }
 .child3 p{
@@ -466,10 +446,20 @@ nav ul li a:hover::after{
 
 /* EDITOR SECTION */
 #black{
-    width: 1500px;
-    height: 30px;
-    margin-bottom: 50px;
-    background-color: black;
+    width: 250px;
+    text-align: center;
+    font-size: 4.5vh;
+    font-weight: 900;
+    letter-spacing: 5px;
+    height: 50px;
+    margin: 50px auto;
+    margin-bottom: 80px;
+    border: 1px solid white;
+    background-color: aqua;
+}
+#black2{
+    margin-bottom: 30px;
+    height: 50px;
 }
 canvas {
     border: 10px solid rgb(20, 225, 240);
@@ -509,6 +499,7 @@ input[type=range]{
 .slideContainer{
     width: 75%;
     margin-bottom: 0px;
+    margin-top: -20px;
     margin-left: 20px;
     margin-right: 5px;
 }
@@ -553,66 +544,66 @@ input[type=range]{
     width: 1275px;
     justify-content: space-between; 
     margin-bottom: 100px;
-    margin-top: -50px;
+    margin-top: -60px;
 }
 
 
 /* BOX ANIMATION */
-.box div{
+.box div, .box2 div{
 	position: absolute;
-	z-index: 1;
+	z-index: 100;
 	width: 60px;
 	height: 60px;
 	background-color: transparent;
 	border: 6px solid rgba(240, 78, 145, 0.8);
 }
-.box div:nth-child(1){
+.box div:nth-child(1), .box2 div:nth-child(1){
 	top: 12%;
 	left: 42%;
 	animation: animate 10s linear infinite;
 }
-.box div:nth-child(2){
-	top: 12%;
+.box div:nth-child(2), .box2 div:nth-child(2){
+	top: 52%;
 	left: 42%;
 	animation: animate 10s linear infinite;
 }
-.box div:nth-child(3){
+.box div:nth-child(3), .box2 div:nth-child(3){
 	top: 70%;
 	left: 50%;
 	animation: animate 7s linear infinite;
 }
-.box div:nth-child(4){
+.box div:nth-child(4), .box2 div:nth-child(4){
 	top: 0%;
 	left: 60%;
 	animation: animate 10s linear infinite;
 }
-.box div:nth-child(5){
+.box div:nth-child(5), .box2 div:nth-child(5){
 	top: 67%;
 	left: 10%;
 	animation: animate 6s linear infinite;
 }
-.box div:nth-child(6){
+.box div:nth-child(6), .box2 div:nth-child(6){
 	top: 80%;
 	left: 70%;
 	animation: animate 12s linear infinite;
 }
-.box div:nth-child(7){
+.box div:nth-child(7), .box2 div:nth-child(7){
 	top: 60%;
 	left: 80%;
 	animation: animate 15s linear infinite;
 }
-.box div:nth-child(8){
+.box div:nth-child(8), .box2 div:nth-child(8){
 	top: 32%;
 	left: 25%;
 	animation: animate 16s linear infinite;
 }
-.box div:nth-child(9){
+.box div:nth-child(9), .box2 div:nth-child(9){
 	top: 90%;
 	left: 25%;
 	animation: animate 9s linear infinite;
 }
-.box div:nth-child(10){
-	top: 20%;
+.box div:nth-child(10), .box2 div:nth-child(10){
+	top: 59%;
 	left: 80%;
 	animation: animate 12s linear infinite;
 }
