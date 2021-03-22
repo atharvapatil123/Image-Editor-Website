@@ -9,6 +9,7 @@ html{
 	/* font-family: 'Cairo', sans-serif; */
 	/* font-family: 'Assistant', sans-serif; */
 	font-family: 'Reggae One', cursive;
+    scroll-behavior: smooth;
 }
 body{
 	background: black;

@@ -57,3 +57,6 @@
     padding-bottom: 7px;
     margin-top: 20px;
 }
+html{
+  scroll-behavior: smooth;
+}

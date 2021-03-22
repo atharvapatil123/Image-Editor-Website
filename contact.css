@@ -36,7 +36,6 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: ''; */  
 }
 
 .contactform
@@ -71,12 +70,13 @@ input[type=text],input[type=number],input[type=email], select, textarea {
     resize: vertical;
 }
   
-
+html{
+    scroll-behavior: smooth;
+}
 .div2
 {
    margin-left: 400px;
    margin-top: 20px;
-   /* width: 30%; */ 
 }
 
 .icon{
@@ -87,34 +87,20 @@ input[type=text],input[type=number],input[type=email], select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 70%; */
     font-size: 32px;
     clip-path: circle();
 }
 
 .textt{
-    font-size: 15px;
+    font-size: 17px;
     margin-left: 20px;
-    margin-top: 10px;
-      
 }
 
 .boxx
 {
     display: flex;
-    /* margin: 10px; */
-    /* margin-top: 15px; */
     margin-bottom: 30px;
-    /* background: #000; */
-
 }
- /* .contactt
-{   
-    height: auto;
-    padding-left: 200px;
-    padding-top: 20px;
-    background-color: rgb(226, 55, 55);
-}  */
 
 .h33
 {
@@ -123,8 +109,7 @@ input[type=text],input[type=number],input[type=email], select, textarea {
 }
 
 .lab{
-    /* color: rgb(20, 225, 240); */
-    font-size: 17px;
+    font-size: 19px;
 }
 
 input[type="submit"]{
@@ -136,10 +121,11 @@ input[type="submit"]{
     background-color: black;
     color: white;
     padding: 5px;
-    /* margin-top: 10px; */
     width: 100%;
-    /* sdfkj */
   }
+
+
+
   .contact{
       list-style: none;
       display: flex;
@@ -149,9 +135,6 @@ input[type="submit"]{
       margin: 0px;
   }
   .center{
-    /* margin: 20px; */
-    /* border-top: 2px solid white; */
-
     height: 150px;
   }
   .center div{
@@ -168,10 +151,7 @@ input[type="submit"]{
   .contact li img{
       width: 50%;
       height: 20%;
-      /* size: 10%; */
-      /* display: inline-block; */
       padding: 0px;
-      /* padding-bottom: 10px; */
       margin-top: 10px;
   }
   #linkedin, #github, #facebook{
@@ -196,3 +176,7 @@ input[type="submit"]{
     border: 1px solid rgb(255,255 ,255);
 }
 
+::placeholder {
+    /* color: peachpuff; */
+    font-size: 15px;
+  }
