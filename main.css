@@ -231,7 +231,9 @@ nav ul li a:hover::after{
 }
 .asd div:hover{
     box-shadow: rgba(0, 0, 0, 0.22) 10px 19px 43px;
-    transform: translate3d(0px, -1px, 0px);}
+    transform: translate3d(0px, 0px, 1px);
+    transform: scale(1.04);
+}
 .icons{
     margin-left: 90px;
     margin-top: 20px;
