@@ -64,7 +64,7 @@ nav{
 	transform: translateX(-100rem);
     animation: slideIn .750s forwards;
 	color: rgb(146, 13, 69);
-    margin-right: 655px;
+    margin-right: 500px;
 }
 .brand span{
 	color: crimson;
