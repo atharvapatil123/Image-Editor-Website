@@ -122,3 +122,7 @@ input{
     width: 1100px;
     justify-content: space-between; 
 }
+
+html{
+    scroll-behavior: smooth;
+}
