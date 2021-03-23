@@ -2,7 +2,19 @@
 
 //slider js
 
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("value1");
 
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+    output1.innerHTML = this.value;
+}
+slider1.addEventListener("mousemove",function(){
+    var x = slider1.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider1.style.background = color;
+})
 
 var slider2 = document.getElementById("myRange2");
 var output2 = document.getElementById("value2");
@@ -109,19 +121,6 @@ function draww() {
 
 
 function applyRed(){
-    var slider1 = document.getElementById("myRange1");
-    var output1 = document.getElementById("value1");
-
-    output1.innerHTML = slider1.value;
-
-    slider1.oninput = function() {
-        output1.innerHTML = this.value;
-    }
-    slider1.addEventListener("mousemove",function(){
-        var x = slider1.value;
-        var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
-        slider1.style.background = color;
-    })
     var x1 = slider1.value;
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();

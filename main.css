@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 html{
-	font-size: 12px;
+	font-size: 11px;
 	/* font-family: 'Open Sans', sans-serif; */
 	/* font-family: 'Cairo', sans-serif; */
 	/* font-family: 'Assistant', sans-serif; */
@@ -37,7 +37,7 @@ header{
     overflow: hidden;
 }
 #pic{
-	padding-left: 10px;
+	padding-left: 20px;
     margin-left: 10px;
 }
 .container{
@@ -55,7 +55,7 @@ nav{
 	justify-content: space-between;
 	align-items: center;
 	text-transform: uppercase;
-	font-size: 1.8rem;
+	font-size: 2.0rem;
 }
 .brand{
 	font-size: 3.2rem;
@@ -175,9 +175,9 @@ nav ul li a:hover::after{
     font-size: 36px;
 }
 .btnm {
-    width: 150px;
-    height: 5.5vh;
-    font-size: 2.2vh;
+    width: 160px;
+    height: 5.9vh;
+    font-size: 2.5vh;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     padding: 01px 18px;
@@ -206,6 +206,7 @@ nav ul li a:hover::after{
 }
 #div1 {
     padding: 20px;
+    cursor: pointer;
     background-image: linear-gradient(rgb(245, 118, 139),white);
     background-color: blue;
     border: 3px solid rgb(0, 0, 0);
@@ -215,6 +216,7 @@ nav ul li a:hover::after{
 #div2 {
     border-radius: 15px;
     border: 3px solid rgb(0, 0, 0);
+    cursor: pointer;
     padding: 20px;
     background-image: linear-gradient(rgb(245, 118, 139),white);
     width: 20%;
@@ -222,10 +224,14 @@ nav ul li a:hover::after{
 #div3 {
     padding: 20px;
     border-radius: 15px;
+    cursor: pointer;
     border: 3px solid rgb(0, 0, 0);
     width: 20%;
     background-image: linear-gradient(rgb(245, 118, 139),white);
 }
+.asd div:hover{
+    box-shadow: rgba(0, 0, 0, 0.22) 10px 19px 43px;
+    transform: translate3d(0px, -1px, 0px);}
 .icons{
     margin-left: 90px;
     margin-top: 20px;
@@ -266,6 +272,7 @@ nav ul li a:hover::after{
 }
 .super h2{
     font-size: 3.1vh;
+    letter-spacing: 2px;
 }
 #main{
     padding-left: 50px;
@@ -292,27 +299,26 @@ nav ul li a:hover::after{
     border: 1px solid white;
 }
 #main p{
-    margin-left: 796px;
-    margin-top: 247px;
-    padding-right: 150px;
-    /* padding-left: 100px; */
+    margin-left: 726px;
+    margin-top: 207px;
+    padding-right: 100px;
 }
 .child0{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    margin-top: -80px;
+    margin-top: -50px;
 }
 .child0 h2{
-    margin-left: 350px;
+    margin-left: 330px;
     margin-top: 250px;
 }
 .child0 p{
-    margin-right: 955px;
+    margin-right: 855px;
     margin-top: 50px;
 }
 .child0 img{
-    margin-left: 950px;
+    margin-left: 850px;
     margin-top: 0px;
 }
 .child0 #i0{
@@ -341,13 +347,12 @@ nav ul li a:hover::after{
     margin-top: 100px;
 }
 .child1 h2{
-    margin-top: 200px;
-    margin-left: 1000px;
-    /* width: 50px; */
+    margin-top: 190px;
+    margin-left: 950px;
 }
 .child1 p{
     padding-right: 100px;
-    margin-left: 696px;
+    margin-left: 656px;
     margin-top: 50px;
 }
 .child1 .image1{
@@ -395,7 +400,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
     padding-top: 10px;
     padding-left: 100px;
-    padding-right: 950px;
+    padding-right: 900px;
 }
 .child2 .image2{
     padding: 10px;
@@ -432,12 +437,12 @@ nav ul li a:hover::after{
     align-items: center;
 }
 .child3 h2{
-    margin-top: 80px;
-    margin-left: 1150px;
+    margin-top: 40px;
+    margin-left: 1080px;
 }
 .child3 p{
     padding-right: 100px;
-    margin-left: 816px;
+    margin-left: 776px;
     margin-top: 30px;
 }
 .child3 img{
@@ -458,17 +463,17 @@ nav ul li a:hover::after{
     align-items: center;
 }
 .child4 h2{
-    margin-left: -680px;
+    margin-left: -600px;
 }
 .child4 p{
-     margin-left: -1050px;
-     padding-right: 1000px;
+     margin-left: -950px;
+     padding-right: 900px;
      padding-left: 205px;
      margin-top: 30px;
 }
 .child4 .image4{
     margin-bottom: 250px;
-    margin-left: 950px;
+    margin-left: 850px;
     margin-top: -100px;
 }
 .child4 #i8{
@@ -509,16 +514,16 @@ nav ul li a:hover::after{
 }
 #black2{
     margin-bottom: 30px;
-    height: 50px;
+    height: 40px;
 }
 canvas {
     border: 10px solid rgb(20, 225, 240);
-    width: 1100px;
+    width: 1000px;
     background-color: white;
-    height: 600px;
+    height: 550px;
     object-fit: contain;
     border-radius: 10px;
-    margin-left: 130px;
+    margin-left: 150px;
     position: relative;
     z-index: 2;
 }
@@ -538,6 +543,7 @@ button{
 }
 button:hover{
 	 background-color:  rgb(20, 225, 240);
+     box-shadow:  rgb(20, 225, 240) 1px 1px 5px;
 }
 button:active{
 	background-color: white;
@@ -554,7 +560,7 @@ input[type=range]{
     margin-right: 5px;
 }
 .slideContainer p{
-    margin-top: 10px;
+    margin-top: 1px;
     margin-left: 40%;
     text-align: center;
     margin-bottom: 10px;
@@ -577,6 +583,7 @@ input[type=range]{
 }
 .slider:hover{
     opacity: 1;
+    box-shadow:  rgb(20, 225, 240) 1px 1px 5px;
 }
 .slider::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -594,7 +601,7 @@ input[type=range]{
     width: 1275px;
     justify-content: space-between; 
     margin-bottom: 100px;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 
@@ -653,8 +660,8 @@ input[type=range]{
 	animation: animate 9s linear infinite;
 }
 .box div:nth-child(10), .box2 div:nth-child(10){
-	top: 59%;
-	left: 80%;
+	top: 79%;
+	left: 0%;
 	animation: animate 12s linear infinite;
 }
 @keyframes animate{
@@ -719,8 +726,8 @@ input[type=range]{
 }
 .up{
     margin-top: 50px;
-    width: 566px;
-    margin-left: 560px;
+    width: 530px;
+    margin-left: 500px;
     border: 1px solid rgb(255 255 255);
 }
 
