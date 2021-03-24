@@ -172,7 +172,15 @@ nav ul li a:hover::after{
     color: white;
 }
 .qaz {
-    font-size: 36px;
+    /* height: 55px; */
+    font-size: 50px;
+    line-height: 6.5vh;
+    /* font-family: cursive; */
+    /* font-family: 'Chango', cursive; */
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    line-height: 65px;
+    letter-spacing: 5px;
 }
 .btnm {
     width: 160px;
@@ -291,14 +299,16 @@ nav ul li a:hover::after{
     border-radius: 10%;
 }
 #main h2{
-    width: 450px;
+    width: 500px;
     text-align: center;
     padding: 2px;
     background-color: aqua;
     color: black;
     margin:auto;
-    font-size: 3.5vh;
     border: 1px solid white;
+    font-family: 'Dancing Script', cursive; 
+    font-size: 40px; 
+    font-weight: 900;
 }
 #main p{
     margin-left: 726px;
@@ -503,9 +513,10 @@ nav ul li a:hover::after{
 
 /* EDITOR SECTION */
 #black{
-    width: 250px;
+    width: 350px;
     text-align: center;
-    font-size: 4.5vh;
+    font-family: 'Dancing Script', cursive; 
+    font-size: 40px; 
     font-weight: 900;
     letter-spacing: 5px;
     height: 50px;
@@ -720,6 +731,9 @@ input[type=range]{
 }
 .contact li{
     width: 8%;
+}
+.contact li:hover{
+    transform: scale(1.2);
 }
 #linkedin{
     width: 25%;

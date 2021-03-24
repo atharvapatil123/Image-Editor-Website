@@ -26,15 +26,20 @@ html{
     color: white;
 }
 #line1{
-    font-size: 38px;
-    font-weight: 700;
+    font-family: 'Dancing Script', cursive; 
+    font-size: 40px; 
+    font-weight: 900;
+    word-spacing: 5px;
+    letter-spacing: 5px;
 }
 #line2{
-    font-size: 18px;
+    font-family: cursive;
+    font-size: 22px;
     margin: 10px;
 }
 #line3{
-    font-size: 18px;
+    font-family: cursive;
+    font-size: 22px;
     margin: 10px;
 }
 .contactform
@@ -100,6 +105,7 @@ input[type="submit"]{
 }
 .contactt{
     margin-top: 70px;
+    font-family: cursive;
 }
 .center{
     text-align: center;
