@@ -160,32 +160,7 @@ function applyRed(){
         pix = p1.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-    // else if(slider5.value!=0){
-    //     var x2 = slider2.value;
-    //     for (var pixel of img.values()) {
-    //         pixel.setGreen(pixel.getGreen() + x2/1.1);
-    //     }
-    // }
-    // else if(slider6.value!=0){
-    //     var x2 = slider2.value;
-    //     for (var pixel of img.values()) {
-    //         pixel.setGreen(pixel.getGreen() + x2/1.1);
-    //     }
-    // }
-    // else if(slider7.value!=0){
-    //     var x2 = slider2.value;
-    //     for (var pixel of img.values()) {
-    //         pixel.setGreen(pixel.getGreen() + x2/1.1);
-    //     }
-    // }
-    // else if(slider8.value!=0){
-    //     var x2 = slider2.value;
-    //     for (var pixel of img.values()) {
-    //         pixel.setGreen(pixel.getGreen() + x2/1.1);
-    //     }
-    // }
-    // var canvas = document.getElementById("can");
-    // p1.drawTo(canvas);
+
     draww();
 }
 function applyGreen(){
@@ -228,8 +203,7 @@ function applyGreen(){
         pix = p2.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-    // var canvas = document.getElementById("can");
-    // p2.drawTo(canvas);
+
     draww();
 }
 function applyBlue(){
@@ -272,8 +246,7 @@ function applyBlue(){
         pix = p3.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-    // var canvas = document.getElementById("can");
-    // p3.drawTo(canvas);
+
     draww();
 }
 
@@ -288,8 +261,7 @@ function applyGray() {
     }
     if(x4==1){
         draww();
-        // var canvas = document.getElementById("can");
-        // p4.drawTo(canvas);
+
     }
     else{
         for (var pixel of p4.values()) {
@@ -324,8 +296,7 @@ function applyGray() {
             img.setPixel(x, y, pix);
         }
         draww();
-        // var canvas = document.getElementById("can");
-        // p4.drawTo(canvas);
+
     }
 }
 
