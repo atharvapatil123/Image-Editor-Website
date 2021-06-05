@@ -1,0 +1,118 @@
+canvas {
+    border: 10px solid rgb(16, 114, 243);
+    width: 1100px;
+    background-color: white;
+    height: 600px;
+    display: inline-block;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-left: 130px;
+}
+
+.bigcont{
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    background-color: black;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    float: left;
+}
+input{
+    margin: 50px;
+    width: 58%;
+}
+.slideContainer{
+    width: 75%;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.slideContainer p{
+    margin-top: 10px;
+    margin-left: 40%;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 1;
+    font-size: 18px;
+}
+.slider::after{
+    content: '100';
+    color: rgb(5, 0, 0);
+    font-size: 1.2rem;
+    position:absolute;
+    left: 20%;
+    top: 19%; 
+}
+#myRange2::after, #myRange2::before{
+    top: 35%;
+}
+#myRange3::after, #myRange3::before{
+    top: 51%;
+}
+#myRange4::after, #myRange4::before{
+    top: 67%;
+}
+#myRange5::after, #myRange5::before{
+    top: 83%;
+}
+#myRange6::after, #myRange6::before{
+    top: 99%;
+}
+#myRange7::after, #myRange7::before{
+    top: 115%;
+}
+#myRange8::after, #myRange8::before{
+    top: 131%;
+}
+.slider::before{
+    content: '0';
+    color: rgb(5, 0, 0);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 4%;
+    top: 19%;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 134%;
+    height: 14px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transform: opacity 0.2s;
+    border-radius: 12px;
+    box-shadow: 0px 1px 12px 4px rgb(0, 0, 22);
+    margin-top: 29px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.reset_clear{
+    display: flex;
+    padding-left:500px;
+    margin-top: 30px;
+    width: 1100px;
+    justify-content: space-between; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
