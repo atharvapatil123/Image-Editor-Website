@@ -593,10 +593,14 @@ input[type=range]{
     margin-top: 29px;
     margin-bottom: 0px;
     margin-left: 25px;
+    background-size: 200% 100%;
+    background-position:left bottom;
 }
 .slider:hover{
     opacity: 1;
     box-shadow:  rgb(20, 225, 240) 1px 1px 5px;
+    background-position:right bottom;
+    transition:all 2s ease;
 }
 .slider::-webkit-slider-thumb{
     -webkit-appearance: none;

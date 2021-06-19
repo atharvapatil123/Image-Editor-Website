@@ -144,18 +144,18 @@
     <div class="bigcont">
         <div class="btn">
             <div class="slideContainer">
-                <input type="range" min=1 max="100" value="0" step="1" onmousemove="applyRed()"
+                <input type="range" min=1 max="100" value="0" step="1" onchange="applyRed()" 
                     id="myRange1" class="slider">
                 <p>Warm: <span id="value1"></span></p>
-                <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyGreen()" onchange="applyGreen()"
+                <input type="range" min=1 max="100" value="1" step="1" onchange="applyGreen()"
                     id="myRange2" class="slider">
                 <p>Emerald: <span id="value2"></span></p>
-                <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyBlue()" onchange="applyBlue()" id="myRange3" class="slider">
+                <input type="range" min=1 max="100" value="1" step="1" onchange="applyBlue()" id="myRange3" class="slider">
                 <p>Cool: <span id="value3"></span></p>
-                <input type="range" min=1 max="100" value="1" step="1" onmousemove="applyGray()" onchange="applyGray()"
+                <input type="range" min=1 max="100" value="1" step="1" onchange="applyGray()"
                     id="myRange4" class="slider">
                 <p>Gray: <span id="value4"></span></p>
-                <input type="range" min=1 max="100" value="1" step="1" onmousemove="contrast()" onchange="contrast()"
+                <input type="range" min=1 max="100" value="1" step="1" onchange="contrast()" 
                     id="myRange5" class="slider">
                 <p>Contrast: <span id="value5"></span></p>
             </div>
@@ -213,7 +213,7 @@
         </div>
     </footer>
 
+    <!-- <script src="main.js"></script> -->
+    <script src="img.js"></script>
 </body>
-<script src="main.js"></script>
-<script src="img.js"></script>
 </html>

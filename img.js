@@ -10,11 +10,17 @@ output1.innerHTML = slider1.value;
 slider1.oninput = function() {
     output1.innerHTML = this.value;
 }
-slider1.addEventListener("mousemove",function(){
+slider1.addEventListener('click' ,function(){
     var x = slider1.value;
     var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider1.style.background = color;
 })
+slider1.addEventListener('mousemove' ,function(){
+    var x = slider1.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider1.style.background = color;
+})
+// ///////////////////////
 
 var slider2 = document.getElementById("myRange2");
 var output2 = document.getElementById("value2");
@@ -29,6 +35,12 @@ slider2.addEventListener("mousemove", function(){
     var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider2.style.background = color;
 })
+slider2.addEventListener('click', function(){
+    var x = slider2.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider2.style.background = color;
+})
+// //////////////////////////
 
 var slider3 = document.getElementById("myRange3");
 var output3 = document.getElementById("value3");
@@ -39,11 +51,18 @@ slider3.oninput = function() {
     output3.innerHTML = this.value;
 }
 
-slider3.addEventListener("mousemove",function(){
+slider3.addEventListener('mousemove',function(){
     var x = slider3.value;
     var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider3.style.background = color;
 })
+slider3.addEventListener('click',function(){
+    var x = slider3.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider3.style.background = color;
+})
+// /////////////////////
+
 var slider4 = document.getElementById("myRange4");
 var output4 = document.getElementById("value4");
 
@@ -58,6 +77,13 @@ slider4.addEventListener("mousemove",function(){
     var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider4.style.background = color;
 })
+slider4.addEventListener('click',function(){
+    var x = slider4.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider4.style.background = color;
+})
+// //////////////////////
+
 var slider5 = document.getElementById("myRange5");
 var output5 = document.getElementById("value5");
 
@@ -68,6 +94,11 @@ slider5.oninput = function() {
 }
 
 slider5.addEventListener("mousemove",function(){
+    var x = slider5.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider5.style.background = color;
+})
+slider5.addEventListener('click',function(){
     var x = slider5.value;
     var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
     slider5.style.background = color;
