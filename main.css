@@ -458,13 +458,116 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .child3 img{
-    animation-name: trans1 ;
     margin-top: 1550px;
     margin-left: 50px;
     top: 550px;
 }
+.child3 #normal-eyes{
+    animation-name: eyes1;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction:normal;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes eyes1{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.child3 #green-eyes{
+    animation-name: eyes2;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction:normal;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes eyes2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.child3 #blue-eyes{
+    animation-name: eyes3;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction:normal;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes eyes3{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.child3 #red-eyes{
+    animation-name: eyes4;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction:normal;
+    border: 5px solid rgb(233, 59, 88);
+    border-radius: 10%;
+}
+@keyframes eyes4{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 .child3 .image3{
-    display: none;
+    /* display: none; */
     border: 5px solid pink;
     border-radius: 10%;
 }
@@ -553,6 +656,7 @@ canvas {
 }
 button{
 	border-radius: 5px;
+    outline: none;
 }
 button:hover{
 	 background-color:  rgb(20, 225, 240);

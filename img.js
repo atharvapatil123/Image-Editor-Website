@@ -148,6 +148,14 @@ function reset() {
 function draww() {
     var canvas = document.getElementById("can");
     img.drawTo(canvas);
+    // for (var pixel of img.values()) {
+    //     var x = pixel.getX();
+    //     var y = pixel.getY();
+    //     console.log(x," ",y);
+    //     // imgpix = resetimg.getPixel(x, y);
+    //     // img.setPixel(x, y, imgpix);
+    // }
+    // console.log()
 }
 
 
@@ -167,6 +175,28 @@ function applyRed(){
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
+        }
+    }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/3);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p1.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        for (var pixel of p1.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+            
+            pix = p1.getPixel(x, y);
+            img.setPixel(x, y, pix);
         }
     }
     if(slider2.value>1){
@@ -212,6 +242,28 @@ function applyGreen(){
             pixel.setBlue(avg);
         }
     }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/3);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p2.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        for (var pixel of p2.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+            
+            pix = p2.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
+    }
     if(slider1.value>1){
         var x1 = slider1.value;
         for (var pixel of p2.values()){
@@ -255,6 +307,28 @@ function applyBlue(){
             pixel.setBlue(avg);
         }
     }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/3);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p3.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        for (var pixel of p3.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+            
+            pix = p3.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
+    }
     if(slider1.value>1){
         var x1 = slider1.value;
         for (var pixel of p3.values()){
@@ -292,7 +366,6 @@ function applyGray() {
     }
     if(x4==1){
         draww();
-
     }
     else{
         for (var pixel of p4.values()) {
@@ -300,6 +373,28 @@ function applyGray() {
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
+        }
+        if(slider5.value>1){
+            var x6 = Math.floor(slider5.value/3);
+            var contrast = x6;
+            var q = 30;
+            var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+            for (var pixel of p4.values()) {
+                var r2 = (factor * (pixel.getRed() - q) + q);
+                var b2 = (factor * (pixel.getBlue() - q) + q);
+                var g2 = (factor * (pixel.getGreen() - q) + q);
+                
+                pixel.setRed(r2);
+                pixel.setBlue(b2);
+                pixel.setGreen(g2);
+            }
+            for (var pixel of p4.values()) {
+                var x = pixel.getX();
+                var y = pixel.getY();
+                
+                pix = p4.getPixel(x, y);
+                img.setPixel(x, y, pix);
+            }
         }
         if(slider1.value>1){
             var x1 = slider1.value;
@@ -331,47 +426,7 @@ function applyGray() {
     }
 }
 
-
-function applyBright() {
-    for (var pixel of resetimg.values()) {
-        var x = pixel.getX();
-        var y = pixel.getY();
-
-        pix = resetimg.getPixel(x, y);
-        p5.setPixel(x, y, pix);
-    }
-    var q = 20;
-    for (var pixel of p5.values()) {
-        var r = pixel.getRed();
-        var b = pixel.getBlue();
-        var g = pixel.getGreen();
-        if (r > b && r > g) {
-            pixel.setRed(r + q);
-            pixel.setGreen(g + (q / 10));
-            pixel.setBlue(b + (q / 10));
-        }
-        if (b > r && b > g) {
-            pixel.setBlue(b + (q /0.85));
-            pixel.setRed(r + (q / 8));
-            pixel.setGreen(b + (q / 20));
-
-        }
-        if (g > b && g > r) {
-            pixel.setRed(r + (q / 2));
-            pixel.setGreen(g + q);
-            pixel.setBlue(b + (q / 4));
-        }
-    }
-    for (var pixel of p5.values()) {
-        var x = pixel.getX();
-        var y = pixel.getY();
-
-        pix = p5.getPixel(x, y);
-        img.setPixel(x, y, pix);
-    }
-    draww();
-}
-
+//////////////////////////CONTRAST/////////////////////
 function contrast() {
     var x6 = Math.floor(slider5.value/3);
     for (var pixel of resetimg.values()) {
@@ -380,6 +435,33 @@ function contrast() {
 
         pix = resetimg.getPixel(x, y);
         p6.setPixel(x, y, pix);
+    }
+    if(slider4.value>1){
+        var x4 = slider4.value;
+        for (var pixel of p6.values()) {
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+        }
+    }
+    if(slider1.value>1){
+        var x1 = slider1.value;
+        for (var pixel of p6.values()){
+            pixel.setRed(pixel.getRed() + x1/1.1);
+        }
+    }
+    if(slider2.value>1){
+        var x2 = slider2.value;
+        for (var pixel of p6.values()){
+            pixel.setGreen(pixel.getGreen() + x2/1.1);
+        }
+    }
+    if(slider3.value>1){
+        var x3 = slider3.value;
+        for (var pixel of p6.values()) {
+            pixel.setBlue(pixel.getBlue() + x3/1.1);
+        }
     }
     var contrast = x6;
     var q = 30;
@@ -392,7 +474,7 @@ function contrast() {
             var r2 = (factor * (pixel.getRed() - q) + q);
             var b2 = (factor * (pixel.getBlue() - q) + q);
             var g2 = (factor * (pixel.getGreen() - q) + q);
-
+            
             pixel.setRed(r2);
             pixel.setBlue(b2);
             pixel.setGreen(g2);
@@ -400,7 +482,7 @@ function contrast() {
         for (var pixel of p6.values()) {
             var x = pixel.getX();
             var y = pixel.getY();
-    
+            
             pix = p6.getPixel(x, y);
             img.setPixel(x, y, pix);
         }
@@ -408,20 +490,124 @@ function contrast() {
     }
 }
 
-function invert() {
-    var contrast = 60;
-    for (var pixel of img.values()) {
-        var r2 = (255 - pixel.getRed());
-        var b2 = (255 - pixel.getBlue());
-        var g2 = (255 - pixel.getGreen());
+//////////////////////BRIGHTNESS//////////////////////
+var clicked_bright = true;
+var brightt = document.getElementById('bright');
 
-        pixel.setRed(r2);
-        pixel.setBlue(b2);
-        pixel.setGreen(g2);
+brightt.addEventListener('mouseenter',()=>{
+    if(clicked_bright){
+        brightt.style.backgroundColor='rgb(20, 225, 240)';
     }
-    draww();
+})
+brightt.addEventListener('mouseleave',()=>{
+    if(clicked_bright){
+        brightt.style.backgroundColor='white';
+    }
+})
+function applyBright() {
+    if(clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        // for (var pixel of resetimg.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
+    
+        //     pix = resetimg.getPixel(x, y);
+        //     p5.setPixel(x, y, pix);
+        // }
+        var q = 30;
+        for (var pixel of img.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+    
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+        // for (var pixel of p5.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
+    
+        //     pix = p5.getPixel(x, y);
+        //     img.setPixel(x, y, pix);
+        // }
+        draww();
+    }
+    else{
+        clicked_bright=true;
+        invertt.style.backgroundColor = 'white';
+        for (var pixel of resetimg.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+    
+            pix = resetimg.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
+        draww();
+    }
 }
 
+///////////////////////INVERT///////////////////////
+
+var clicked_invert = true;
+var invertt = document.getElementById('invert');
+
+invertt.addEventListener('mouseenter',()=>{
+    if(clicked_invert){
+        invertt.style.backgroundColor='rgb(20, 225, 240)';
+    }
+})
+invertt.addEventListener('mouseleave',()=>{
+    if(clicked_invert){
+        invertt.style.backgroundColor='white';
+    }
+})
+
+
+function invert() {
+    if(clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var contrast = 60;
+        for (var pixel of img.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+    
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        draww();
+    }
+    else{
+        clicked_invert=true;
+        invertt.style.backgroundColor = 'white';
+        for (var pixel of resetimg.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+    
+            pix = resetimg.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
+        draww();
+    }
+}
+
+/////////////////////////////////SATURATE//////////////////
 function saturate() {
     var sv = 2; // saturation value. 0 = grayscale, 1 = original
     var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
