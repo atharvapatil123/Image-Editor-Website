@@ -104,6 +104,28 @@ slider5.addEventListener('click',function(){
     slider5.style.background = color;
 })
 
+// //////////////////////
+
+var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("value6");
+
+output6.innerHTML = slider6.value;
+
+slider6.oninput = function() {
+    output6.innerHTML = this.value;
+}
+
+slider6.addEventListener("mousemove",function(){
+    var x = slider6.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider6.style.background = color;
+})
+slider6.addEventListener('click',function(){
+    var x = slider6.value;
+    var color = 'linear-gradient(90deg, rgb(20, 225, 240)' + x + '%, rgb(252,252,252)' + x +'%)';
+    slider6.style.background = color;
+})
+
 /////////////////////////////////////////////////////////////
 
 
@@ -168,17 +190,49 @@ function applyRed(){
         pix = resetimg.getPixel(x, y);
         p1.setPixel(x, y, pix);
     }
+    if(slider6.value>1){
+        var x5=slider6.value;
+        x5=x5/5;
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p1.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
     if(slider4.value>1){
         var x4 = slider4.value;
         for (var pixel of p1.values()) {
-            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
         }
     }
     if(slider5.value>1){
-        var x6 = Math.floor(slider5.value/3);
+        var x6 = Math.floor(slider5.value/1.5);
         var contrast = x6;
         var q = 30;
         var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
@@ -221,7 +275,6 @@ function applyRed(){
         pix = p1.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-
     draww();
 }
 function applyGreen(){
@@ -233,17 +286,49 @@ function applyGreen(){
         pix = resetimg.getPixel(x, y);
         p2.setPixel(x, y, pix);
     }
+    if(slider6.value>1){
+        var x5=slider6.value;
+        x5=x5/5;
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p2.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+            
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
     if(slider4.value>1){
         var x4 = slider4.value;
         for (var pixel of p2.values()) {
-            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
         }
     }
     if(slider5.value>1){
-        var x6 = Math.floor(slider5.value/3);
+        var x6 = Math.floor(slider5.value/1.5);
         var contrast = x6;
         var q = 30;
         var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
@@ -286,7 +371,6 @@ function applyGreen(){
         pix = p2.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-
     draww();
 }
 function applyBlue(){
@@ -298,17 +382,49 @@ function applyBlue(){
         pix = resetimg.getPixel(x, y);
         p3.setPixel(x, y, pix);
     }
+    if(slider6.value>1){
+        var x5=slider6.value;
+        x5=x5/5;
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p3.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+            
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
     if(slider4.value>1){
         var x4 = slider4.value;
         for (var pixel of p3.values()) {
-            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
         }
     }
     if(slider5.value>1){
-        var x6 = Math.floor(slider5.value/3);
+        var x6 = Math.floor(slider5.value/1.5);
         var contrast = x6;
         var q = 30;
         var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
@@ -351,7 +467,6 @@ function applyBlue(){
         pix = p3.getPixel(x, y);
         img.setPixel(x, y, pix);
     }
-
     draww();
 }
 
@@ -364,18 +479,52 @@ function applyGray() {
         pix = resetimg.getPixel(x, y);
         p4.setPixel(x, y, pix);
     }
-    if(x4==1){
-        draww();
-    }
-    else{
-        for (var pixel of p4.values()) {
-            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
-            pixel.setRed(avg);
-            pixel.setGreen(avg);
-            pixel.setBlue(avg);
+    // if(x4==1){
+    //     draww();
+    // }
+    // else{
+        if(slider6.value>1){
+            var x5=slider6.value;
+            x5=x5/5;
+            var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+            var luG = 0.6094;
+            var luB = 0.0820;
+            
+            var az = (1 - x5) * luR + x5;
+            var bz = (1 - x5) * luG;
+            var cz = (1 - x5) * luB;
+            var dz = (1 - x5) * luR;
+            var ez = (1 - x5) * luG + x5;
+            var fz = (1 - x5) * luB;
+            var gz = (1 - x5) * luR;
+            var hz = (1 - x5) * luG;
+            var iz = (1 - x5) * luB + x5;
+
+            for (var pixel of p4.values()) {
+
+                var r = pixel.getRed();
+                var g = pixel.getGreen();
+                var b = pixel.getBlue();
+
+                var r2 = (az * r + bz * g + cz * b);
+                var g2 = (dz * r + ez * g + fz * b);
+                var b2 = (gz * r + hz * g + iz * b);
+
+                pixel.setRed(r2);
+                pixel.setBlue(b2);
+                pixel.setGreen(g2);
+            }
+        }
+        if(x4>1){
+            for (var pixel of p4.values()) {
+                var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
+                pixel.setRed(avg);
+                pixel.setGreen(avg);
+                pixel.setBlue(avg);
+            }
         }
         if(slider5.value>1){
-            var x6 = Math.floor(slider5.value/3);
+            var x6 = Math.floor(slider5.value/1.5);
             var contrast = x6;
             var q = 30;
             var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
@@ -423,12 +572,12 @@ function applyGray() {
         }
         draww();
 
-    }
+    // }
 }
 
 //////////////////////////CONTRAST/////////////////////
 function contrast() {
-    var x6 = Math.floor(slider5.value/3);
+    var x6 = Math.floor(slider5.value/1.5);
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
@@ -436,10 +585,42 @@ function contrast() {
         pix = resetimg.getPixel(x, y);
         p6.setPixel(x, y, pix);
     }
+    if(slider6.value>1){
+        var x5=slider6.value;
+        x5=x5/5;
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+
+        for (var pixel of p6.values()) {
+
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
     if(slider4.value>1){
         var x4 = slider4.value;
         for (var pixel of p6.values()) {
-            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.1);
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
             pixel.setRed(avg);
             pixel.setGreen(avg);
             pixel.setBlue(avg);
@@ -489,6 +670,118 @@ function contrast() {
         draww();
     }
 }
+
+/////////////////////////////////SATURATE//////////////////
+function saturate() {
+    for (var pixel of resetimg.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = resetimg.getPixel(x, y);
+        p5.setPixel(x, y, pix);
+    }
+    if(slider6.value>1){
+        var x5 = slider6.value;
+        x5=x5/5;
+        console.log("In saturate")
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p5.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
+    if(slider4.value>1){
+        var x4 = slider4.value;
+        for (var pixel of p5.values()) {
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+        }
+        console.log("grey")
+    }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/1.5);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p5.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        for (var pixel of p5.values()) {
+            var x = pixel.getX();
+            var y = pixel.getY();
+            
+            pix = p5.getPixel(x, y);
+            img.setPixel(x, y, pix);
+        }
+    }
+    if(slider1.value>1){
+        var x1 = slider1.value;
+        for (var pixel of p5.values()){
+            pixel.setRed(pixel.getRed() + x1/1.1);
+        }
+    }
+    if(slider2.value>1){
+        var x2 = slider2.value;
+        for (var pixel of p5.values()){
+            pixel.setGreen(pixel.getGreen() + x2/1.1);
+        }
+    }
+    if(slider3.value>1){
+        var x3 = slider3.value;
+        for (var pixel of p5.values()) {
+            pixel.setBlue(pixel.getBlue() + x3/1.1);
+        }
+    }
+    // for (var pixel of p5.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
+
+        //     pix = p5.getPixel(x, y);
+    //     img.setPixel(x, y, pix);
+    // }
+    // var x = 2; // saturation value. 0 = grayscale, 1 = original
+    for (var pixel of p5.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+        
+        pix = p5.getPixel(x, y);
+        img.setPixel(x, y, pix);
+        // console.log("in saturate");
+    }
+    draww();
+}
+
 
 //////////////////////BRIGHTNESS//////////////////////
 var clicked_bright = true;
@@ -607,39 +900,7 @@ function invert() {
     }
 }
 
-/////////////////////////////////SATURATE//////////////////
-function saturate() {
-    var sv = 2; // saturation value. 0 = grayscale, 1 = original
-    var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
-    var luG = 0.6094;
-    var luB = 0.0820;
-
-    var az = (1 - sv) * luR + sv;
-    var bz = (1 - sv) * luG;
-    var cz = (1 - sv) * luB;
-    var dz = (1 - sv) * luR;
-    var ez = (1 - sv) * luG + sv;
-    var fz = (1 - sv) * luB;
-    var gz = (1 - sv) * luR;
-    var hz = (1 - sv) * luG;
-    var iz = (1 - sv) * luB + sv;
-
-    for (var pixel of img.values()) {
-
-        var r = pixel.getRed();
-        var g = pixel.getGreen();
-        var b = pixel.getBlue();
-
-        var r2 = (az * r + bz * g + cz * b);
-        var g2 = (dz * r + ez * g + fz * b);
-        var b2 = (gz * r + hz * g + iz * b);
-
-        pixel.setRed(r2);
-        pixel.setBlue(b2);
-        pixel.setGreen(g2);
-    }
-    draww();
-}
+/////////////DOWNLOAD/////////////////
 
 var download = function () {
     var link = document.createElement('a');

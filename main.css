@@ -653,6 +653,7 @@ canvas {
     flex-direction: column;
     padding-right: 10px;
     float: left;
+    margin-top: -37px;
 }
 button{
 	border-radius: 5px;
@@ -668,6 +669,9 @@ button:active{
 input[type=range]{
     margin: 20px;
     width: 131%;
+}
+#myRange1{
+    margin-top: 25px;
 }
 .slideContainer{
     width: 75%;
@@ -722,7 +726,7 @@ input[type=range]{
     width: 1275px;
     justify-content: space-between; 
     margin-bottom: 100px;
-    margin-top: -50px;
+    margin-top: -55px;
 }
 
 
