@@ -694,7 +694,7 @@ input[type=range]{
     height: 14px;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: 0.2s;
+    /* -webkit-transition: 0.2s; */
     transform: opacity 0.2s;
     border-radius: 12px;
     box-shadow: 0px 1px 12px 4px rgb(0, 0, 22);
