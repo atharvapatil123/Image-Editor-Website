@@ -798,6 +798,27 @@ brightt.addEventListener('mouseleave',()=>{
     }
 })
 function applyBright() {
+    for (var pixel of resetimg.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = resetimg.getPixel(x, y);
+        p7.setPixel(x, y, pix);
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p7.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        console.info("In Invert into bright")
+    }
     if(clicked_bright){
         clicked_bright=false;
         brightt.style.backgroundColor = 'rgb(20, 225, 240)';
@@ -809,7 +830,7 @@ function applyBright() {
         //     p5.setPixel(x, y, pix);
         // }
         var q = 30;
-        for (var pixel of img.values()) {
+        for (var pixel of p7.values()) {
             var r = pixel.getRed();
             var b = pixel.getBlue();
             var g = pixel.getGreen();
@@ -830,27 +851,23 @@ function applyBright() {
                 pixel.setBlue(b + (q / 4));
             }
         }
-        // for (var pixel of p5.values()) {
-        //     var x = pixel.getX();
-        //     var y = pixel.getY();
-    
-        //     pix = p5.getPixel(x, y);
-        //     img.setPixel(x, y, pix);
-        // }
-        draww();
     }
     else{
         clicked_bright=true;
         invertt.style.backgroundColor = 'white';
-        for (var pixel of resetimg.values()) {
-            var x = pixel.getX();
-            var y = pixel.getY();
-    
-            pix = resetimg.getPixel(x, y);
-            img.setPixel(x, y, pix);
+        if(!clicked_invert){
+            clicked_invert=false;
+            invertt.style.backgroundColor = 'rgb(20, 225, 240)';
         }
-        draww();
     }
+    for (var pixel of p7.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = p7.getPixel(x, y);
+        img.setPixel(x, y, pix);
+    }
+    draww();
 }
 
 ///////////////////////INVERT///////////////////////
@@ -871,11 +888,44 @@ invertt.addEventListener('mouseleave',()=>{
 
 
 function invert() {
+    for (var pixel of resetimg.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = resetimg.getPixel(x, y);
+        p8.setPixel(x, y, pix);
+    }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p8.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+    
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
     if(clicked_invert){
         clicked_invert=false;
         invertt.style.backgroundColor = 'rgb(20, 225, 240)';
         var contrast = 60;
-        for (var pixel of img.values()) {
+        for (var pixel of p8.values()) {
             var r2 = (255 - pixel.getRed());
             var b2 = (255 - pixel.getBlue());
             var g2 = (255 - pixel.getGreen());
@@ -884,20 +934,23 @@ function invert() {
             pixel.setBlue(b2);
             pixel.setGreen(g2);
         }
-        draww();
     }
     else{
         clicked_invert=true;
         invertt.style.backgroundColor = 'white';
-        for (var pixel of resetimg.values()) {
-            var x = pixel.getX();
-            var y = pixel.getY();
-    
-            pix = resetimg.getPixel(x, y);
-            img.setPixel(x, y, pix);
+        if(!clicked_bright){
+            clicked_bright=false;
+            brightt.style.backgroundColor = 'rgb(20, 225, 240)';
         }
-        draww();
     }
+    for (var pixel of p8.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+
+        pix = p8.getPixel(x, y);
+        img.setPixel(x, y, pix);
+    }
+    draww();
 }
 
 /////////////DOWNLOAD/////////////////
