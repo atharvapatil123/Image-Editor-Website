@@ -190,6 +190,46 @@ function applyRed(){
         pix = resetimg.getPixel(x, y);
         p1.setPixel(x, y, pix);
     }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p1.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+                
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p1.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
+    }
     if(slider6.value>1){
         var x5=slider6.value;
         x5=x5/5;
@@ -253,6 +293,7 @@ function applyRed(){
             img.setPixel(x, y, pix);
         }
     }
+    
     if(slider2.value>1){
         var x2 = slider2.value;
         for (var pixel of p1.values()){
@@ -285,6 +326,46 @@ function applyGreen(){
 
         pix = resetimg.getPixel(x, y);
         p2.setPixel(x, y, pix);
+    }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p2.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+                
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p2.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
     }
     if(slider6.value>1){
         var x5=slider6.value;
@@ -349,6 +430,7 @@ function applyGreen(){
             img.setPixel(x, y, pix);
         }
     }
+    
     if(slider1.value>1){
         var x1 = slider1.value;
         for (var pixel of p2.values()){
@@ -381,6 +463,46 @@ function applyBlue(){
 
         pix = resetimg.getPixel(x, y);
         p3.setPixel(x, y, pix);
+    }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p3.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+                
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p3.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
     }
     if(slider6.value>1){
         var x5=slider6.value;
@@ -445,6 +567,7 @@ function applyBlue(){
             img.setPixel(x, y, pix);
         }
     }
+    
     if(slider1.value>1){
         var x1 = slider1.value;
         for (var pixel of p3.values()){
@@ -478,6 +601,46 @@ function applyGray() {
 
         pix = resetimg.getPixel(x, y);
         p4.setPixel(x, y, pix);
+    }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p4.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+                
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p4.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
     }
     // if(x4==1){
     //     draww();
@@ -515,14 +678,6 @@ function applyGray() {
                 pixel.setGreen(g2);
             }
         }
-        if(x4>1){
-            for (var pixel of p4.values()) {
-                var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
-                pixel.setRed(avg);
-                pixel.setGreen(avg);
-                pixel.setBlue(avg);
-            }
-        }
         if(slider5.value>1){
             var x6 = Math.floor(slider5.value/1.5);
             var contrast = x6;
@@ -543,6 +698,15 @@ function applyGray() {
                 
                 pix = p4.getPixel(x, y);
                 img.setPixel(x, y, pix);
+            }
+        }
+        
+        if(x4>1){
+            for (var pixel of p4.values()) {
+                var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
+                pixel.setRed(avg);
+                pixel.setGreen(avg);
+                pixel.setBlue(avg);
             }
         }
         if(slider1.value>1){
@@ -585,6 +749,46 @@ function contrast() {
         pix = resetimg.getPixel(x, y);
         p6.setPixel(x, y, pix);
     }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p6.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+    
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p6.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
+    }
     if(slider6.value>1){
         var x5=slider6.value;
         x5=x5/5;
@@ -626,6 +830,7 @@ function contrast() {
             pixel.setBlue(avg);
         }
     }
+    
     if(slider1.value>1){
         var x1 = slider1.value;
         for (var pixel of p6.values()){
@@ -680,6 +885,46 @@ function saturate() {
         pix = resetimg.getPixel(x, y);
         p5.setPixel(x, y, pix);
     }
+    if(!clicked_bright){
+        clicked_bright=false;
+        brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        var q = 30;
+        for (var pixel of p5.values()) {
+            var r = pixel.getRed();
+            var b = pixel.getBlue();
+            var g = pixel.getGreen();
+            if (r >= b && r >= g) {
+                pixel.setRed(r + q);
+                pixel.setGreen(g + (q / 10));
+                pixel.setBlue(b + (q / 10));
+            }
+            if (b >= r && b >= g) {
+                pixel.setBlue(b + (q /0.85));
+                pixel.setRed(r + (q / 8));
+                pixel.setGreen(b + (q / 20));
+    
+            }
+            if (g >= b && g >= r) {
+                pixel.setRed(r + (q / 2));
+                pixel.setGreen(g + q);
+                pixel.setBlue(b + (q / 4));
+            }
+        }
+    }
+    if(!clicked_invert){
+        clicked_invert=false;
+        invertt.style.backgroundColor = 'rgb(20, 225, 240)';
+        for (var pixel of p5.values()) {
+            var r2 = (255 - pixel.getRed());
+            var b2 = (255 - pixel.getBlue());
+            var g2 = (255 - pixel.getGreen());
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // console.info("In Invert into bright")
+    }
     if(slider6.value>1){
         var x5 = slider6.value;
         x5=x5/5;
@@ -721,7 +966,7 @@ function saturate() {
             pixel.setGreen(avg);
             pixel.setBlue(avg);
         }
-        console.log("grey")
+        // console.log("grey")
     }
     if(slider5.value>1){
         var x6 = Math.floor(slider5.value/1.5);
@@ -737,13 +982,13 @@ function saturate() {
             pixel.setBlue(b2);
             pixel.setGreen(g2);
         }
-        for (var pixel of p5.values()) {
-            var x = pixel.getX();
-            var y = pixel.getY();
+        // for (var pixel of p5.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
             
-            pix = p5.getPixel(x, y);
-            img.setPixel(x, y, pix);
-        }
+        //     pix = p5.getPixel(x, y);
+        //     img.setPixel(x, y, pix);
+        // }
     }
     if(slider1.value>1){
         var x1 = slider1.value;
@@ -817,7 +1062,7 @@ function applyBright() {
             pixel.setBlue(b2);
             pixel.setGreen(g2);
         }
-        console.info("In Invert into bright")
+        // console.info("In Invert into bright")
     }
     if(clicked_bright){
         clicked_bright=false;
@@ -860,6 +1105,91 @@ function applyBright() {
             invertt.style.backgroundColor = 'rgb(20, 225, 240)';
         }
     }
+    if(slider6.value>1){
+        var x5 = slider6.value;
+        x5=x5/5;
+        console.log("In saturate")
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p7.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
+    if(slider4.value>1){
+        var x4 = slider4.value;
+        for (var pixel of p7.values()) {
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+        }
+        // console.log("grey")
+    }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/1.5);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p7.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // for (var pixel of p7.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
+            
+        //     pix = p7.getPixel(x, y);
+        //     img.setPixel(x, y, pix);
+        // }
+    }
+    if(slider1.value>1){
+        var x1 = slider1.value;
+        for (var pixel of p7.values()){
+            pixel.setRed(pixel.getRed() + x1/1.1);
+        }
+    }
+    if(slider2.value>1){
+        var x2 = slider2.value;
+        for (var pixel of p7.values()){
+            pixel.setGreen(pixel.getGreen() + x2/1.1);
+        }
+    }
+    if(slider3.value>1){
+        var x3 = slider3.value;
+        for (var pixel of p7.values()) {
+            pixel.setBlue(pixel.getBlue() + x3/1.1);
+        }
+        console.log("In bright-blue")
+    }
+    
     for (var pixel of p7.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
@@ -891,7 +1221,7 @@ function invert() {
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
-
+        
         pix = resetimg.getPixel(x, y);
         p8.setPixel(x, y, pix);
     }
@@ -941,6 +1271,89 @@ function invert() {
         if(!clicked_bright){
             clicked_bright=false;
             brightt.style.backgroundColor = 'rgb(20, 225, 240)';
+        }
+    }
+    if(slider6.value>1){
+        var x5 = slider6.value;
+        x5=x5/5;
+        console.log("In saturate")
+        var luR = 0.3086; // constant to determine luminance of red. Similarly, for green and blue
+        var luG = 0.6094;
+        var luB = 0.0820;
+        
+        var az = (1 - x5) * luR + x5;
+        var bz = (1 - x5) * luG;
+        var cz = (1 - x5) * luB;
+        var dz = (1 - x5) * luR;
+        var ez = (1 - x5) * luG + x5;
+        var fz = (1 - x5) * luB;
+        var gz = (1 - x5) * luR;
+        var hz = (1 - x5) * luG;
+        var iz = (1 - x5) * luB + x5;
+        
+        for (var pixel of p8.values()) {
+            
+            var r = pixel.getRed();
+            var g = pixel.getGreen();
+            var b = pixel.getBlue();
+
+            var r2 = (az * r + bz * g + cz * b);
+            var g2 = (dz * r + ez * g + fz * b);
+            var b2 = (gz * r + hz * g + iz * b);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+    }
+    if(slider4.value>1){
+        var x4 = slider4.value;
+        for (var pixel of p8.values()) {
+            var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / (x4*0.2);
+            pixel.setRed(avg);
+            pixel.setGreen(avg);
+            pixel.setBlue(avg);
+        }
+        // console.log("grey")
+    }
+    if(slider5.value>1){
+        var x6 = Math.floor(slider5.value/1.5);
+        var contrast = x6;
+        var q = 30;
+        var factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+        for (var pixel of p8.values()) {
+            var r2 = (factor * (pixel.getRed() - q) + q);
+            var b2 = (factor * (pixel.getBlue() - q) + q);
+            var g2 = (factor * (pixel.getGreen() - q) + q);
+            
+            pixel.setRed(r2);
+            pixel.setBlue(b2);
+            pixel.setGreen(g2);
+        }
+        // for (var pixel of p7.values()) {
+        //     var x = pixel.getX();
+        //     var y = pixel.getY();
+            
+        //     pix = p7.getPixel(x, y);
+        //     img.setPixel(x, y, pix);
+        // }
+    }
+    if(slider1.value>1){
+        var x1 = slider1.value;
+        for (var pixel of p8.values()){
+            pixel.setRed(pixel.getRed() + x1/1.1);
+        }
+    }
+    if(slider2.value>1){
+        var x2 = slider2.value;
+        for (var pixel of p8.values()){
+            pixel.setGreen(pixel.getGreen() + x2/1.1);
+        }
+    }
+    if(slider3.value>1){
+        var x3 = slider3.value;
+        for (var pixel of p8.values()) {
+            pixel.setBlue(pixel.getBlue() + x3/1.1);
         }
     }
     for (var pixel of p8.values()) {
