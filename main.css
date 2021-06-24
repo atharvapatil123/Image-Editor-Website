@@ -172,11 +172,8 @@ nav ul li a:hover::after{
     color: white;
 }
 .qaz {
-    /* height: 55px; */
     font-size: 50px;
     line-height: 6.5vh;
-    /* font-family: cursive; */
-    /* font-family: 'Chango', cursive; */
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     line-height: 65px;
@@ -672,6 +669,24 @@ input[type=range]{
 }
 #myRange1{
     margin-top: 25px;
+}
+#red:hover{
+    color: red;
+}
+#green:hover{
+    color: green;
+}
+#blue:hover{
+    color: blue;
+}
+#gray:hover{
+    color: gray;
+}
+#contrast:hover{
+    color:powderblue;
+}
+#saturate:hover{
+    color: mediumvioletred;
 }
 .slideContainer{
     width: 75%;

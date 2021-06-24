@@ -156,7 +156,40 @@ function clear() {
 }
 
 function reset() {
-    
+    slider1.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider1.value + '%, rgb(252,252,252)' + slider1.value +'%)';
+    slider1.style.background = color;
+
+    slider2.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider2.value + '%, rgb(252,252,252)' + slider2.value +'%)';
+    slider2.style.background = color;
+
+    slider3.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider3.value + '%, rgb(252,252,252)' + slider3.value +'%)';
+    slider3.style.background = color;
+
+    slider4.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider4.value + '%, rgb(252,252,252)' + slider4.value +'%)';
+    slider4.style.background = color;
+
+    slider5.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider5.value + '%, rgb(252,252,252)' + slider5.value +'%)';
+    slider5.style.background = color;
+
+    slider6.value=1;
+    var color = 'linear-gradient(90deg, rgb(252, 252, 252)' + slider6.value + '%, rgb(252,252,252)' + slider6.value +'%)';
+    slider6.style.background = color;
+
+    if(!clicked_invert){
+        clicked_invert=true;
+        invertt.style.backgroundColor = 'white';
+    }
+
+    if(!clicked_bright){
+        clicked_bright=true;
+        brightt.style.backgroundColor = 'white';
+    }
+
     for (var pixel of resetimg.values()) {
         var x = pixel.getX();
         var y = pixel.getY();
@@ -1314,7 +1347,6 @@ function invert() {
             pixel.setGreen(avg);
             pixel.setBlue(avg);
         }
-        // console.log("grey")
     }
     if(slider5.value>1){
         var x6 = Math.floor(slider5.value/1.5);
@@ -1330,13 +1362,6 @@ function invert() {
             pixel.setBlue(b2);
             pixel.setGreen(g2);
         }
-        // for (var pixel of p7.values()) {
-        //     var x = pixel.getX();
-        //     var y = pixel.getY();
-            
-        //     pix = p7.getPixel(x, y);
-        //     img.setPixel(x, y, pix);
-        // }
     }
     if(slider1.value>1){
         var x1 = slider1.value;
