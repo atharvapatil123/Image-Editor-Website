@@ -1,173 +1,265 @@
-body{
-    background-color: black;
-} 
-html{
-    scroll-behavior: smooth;
-    font-family: 'Reggae One', cursive;
+body {
+  background-color: black;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
+  font-family: "Reggae One", cursive;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* CONTACT-US DETAILS */
-.container{
-    background-color: pink;
-    background-size: cover;
-	font-family: 'Reggae One', cursive;
+.container {
+  background-color: pink;
+  background-size: cover;
+  font-family: "Reggae One", cursive;
 }
-#getintouch{
-    margin-top: 20px;
-    text-align: center;
-    align-items: center;
-    background-color: black;
-    color: white;
+#getintouch {
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  color: white;
 }
-#line1{
-    font-family: 'Dancing Script', cursive; 
-    font-size: 40px; 
-    font-weight: 900;
-    word-spacing: 5px;
-    letter-spacing: 5px;
+#line1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 900;
+  word-spacing: 5px;
+  letter-spacing: 5px;
 }
-#line2{
-    font-family: cursive;
-    font-size: 22px;
-    margin: 10px;
+#line2 {
+  font-family: cursive;
+  font-size: 22px;
+  margin: 10px;
 }
-#line3{
-    font-family: cursive;
-    font-size: 22px;
-    margin: 10px;
-}
-.contactform
-{
-    margin-left: 50px;
-}
-.abcd
-{
-    margin: 10px;
-    padding: 5px;
-}
-input[type=submit] {
-    background-color: rgb(14, 148, 158);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-input[type=text],input[type=number],input[type=email], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px;
-    resize: vertical;
-}
-.div2
-{
-   margin-left: 400px;
-   margin-top: 20px;
-}
-.icon{
-    min-width: 50px;
-    height: 60px;
-    background:  rgb(243, 243, 243);
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    clip-path: circle();
-}
-.textt{
-    font-size: 17px;
-    margin-left: 20px;
-}
-.boxx
-{
-    display: flex;
-    margin-bottom: 30px;
-}
-.h33
-{
-    color: rgb(20, 225, 240);
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-input[type="submit"]{
-    padding-bottom: 10px;
-}
-.contactt{
-    margin-top: 70px;
-    font-family: cursive;
-}
-.center{
-    text-align: center;
-    font-size: larger;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    width: 100%;
-  }
 
+.contactform {
+  margin-left: 50px;
+}
+.abcd {
+  margin: 10px;
+  padding: 5px;
+}
+input[type="submit"] {
+  background-color: rgb(14, 148, 158);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.div2 {
+  margin-left: 400px;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.icon-logo {
+  min-width: 50px;
+  height: 60px;
+  background: rgb(243, 243, 243);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  clip-path: circle();
+}
+.textt {
+  font-size: 17px;
+  margin-left: 20px;
+}
+.boxx {
+  display: flex;
+  margin-bottom: 30px;
+}
+.h33 {
+  color: rgb(20, 225, 240);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+input[type="submit"] {
+  padding-bottom: 10px;
+}
+.contactt {
+  margin-top: 70px;
+  font-family: cursive;
+}
+.center {
+  text-align: center;
+  font-size: larger;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  width: 100%;
+}
+
+.lab {
+  font-size: 18px;
+}
+
+.details {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
 /* CONTACT-LIST BOTTOM */
-.contact{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
+.contact {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
 }
-.center{
-    height: 150px;
+.center {
+  height: 150px;
 }
-.center div{
-    margin: 20px;
-    font-size: larger;
+.center div {
+  margin: 20px;
+  font-size: larger;
 }
-.contact li a{
-    color: white;
-    font-size: larger;
-    padding: 0px;
-    margin-bottom: 50px;
+.contact li a {
+  color: white;
+  font-size: larger;
+  padding: 0px;
+  margin-bottom: 50px;
 }
 
-.contact li img{
-    width: 50%;
-    height: 20%;
-    padding: 0px;
-    margin-top: 10px;
+.contact li img {
+  width: 50%;
+  height: 20%;
+  padding: 0px;
+  margin-top: 10px;
 }
-#linkedin, #github, #facebook{
-    width: 37%;
-    padding-bottom: 1px;
+#linkedin,
+#github,
+#facebook {
+  width: 37%;
+  padding-bottom: 1px;
 }
-#linkedin{
-    width: 25%;
-    padding-bottom: 7px;
-    margin-top: 18px;
+#linkedin {
+  width: 25%;
+  padding-bottom: 7px;
+  margin-top: 18px;
 }
-#lin{
-    padding-top: 1px;
+#lin {
+  padding-top: 1px;
 }
-.contact li{
-    width: 8%;
+.contact li {
+  width: 8%;
 }
-.up{
-    margin-top: 50px;
-    width: 530px;
-    margin-left: 500px;
-    border: 1px solid rgb(255 255 255);
+.up {
+  margin-top: 50px;
+  width: 530px;
+  margin-left: 500px;
+  border: 1px solid rgb(255 255 255);
 }
 
 ::placeholder {
-    font-size: 13px;
+  font-size: 13px;
+}
+.contactt {
+  display: flex;
+  padding-top: 15px;
+  margin-left: 90px;
+  background-color: black;
+  color: white;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+  #getintouch {
+    width: 900px;
+    margin: auto;
+    font-size: 1rem;
+  }
+  #line1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.4rem;
+    font-weight: 900;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+  }
+  #line2 {
+    font-family: cursive;
+    font-size: 2rem;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 900px) {
+  .contactt {
+    margin-left: 10px;
+  }
+  .div2 {
+    margin-left: 30%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contactt {
+    display: block;
+  }
+  .contactform {
+    width: 700px;
+    margin: 0px auto;
+  }
+  .div2 {
+    width: 700px;
+    margin: 0px auto;
+    margin-top: 100px;
+    margin-left: 15px;
+  }
+  .details {
+    font-size: 1.5rem;
+  }
+  .phone-email {
+    margin: auto;
+  }
+  .info {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .center div{
+    width:115vw;
+    font-size:16px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .center {
+    display:none;
+  }
+}
+@media only screen and (max-width: 1270px){
+  .contact{
+    display: none;
+
+   }
+   .center{
+     margin-top: 100px;
+     margin-bottom: -50px;
+   }
 }

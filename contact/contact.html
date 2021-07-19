@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us- ChitraKala</title>
-    <link rel="icon" href="./../images/logo.jpeg" type="image">
+    <link rel="icon-logo" href="./../images/logo.jpeg" type="image">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./../main.css">
@@ -19,6 +19,7 @@
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cairo:wght@600&family=Reggae+One&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Chango&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <!-- style="background-color: aliceblue;" -->
@@ -27,15 +28,24 @@
     <!-- <div class="wrapper"> -->
         <header>
             <div class="container">
-                <nav>
-                    <img id="pic" src="./../images/photo-editing-icon.jpg" alt="Error in loading Image">
+                <nav id="myTopnav" class="topnav">
+                  <div class="chitra">
+                    <img id="pic" src="../images/photo-editing-icon.jpg" alt="Error in loading Image">
                     <h1 class="brand" style="letter-spacing: 3px;">ChitraKala</h1>
-                    <ul>
-                        <li><a href="./../index.html" >Home</a></li>
-                        <li><a href="./../about/aboutus.html" >About us</a></li>
-                        <li><a href="contact.html" ><b>Contact us</b></a></li>
-    
+                  </div>
+
+                    <div class="ull">
+                      <ul>
+                        <li><a href="../index.html"  style="font-weight: 900;">Home</a></li>
+                        <li><a href="../about/aboutus.html" >About</a></li>
+                        <li><a href="contact.html" >Contact</a></li>
                     </ul>
+                    </div>
+                    <div  class="icon-bar">
+                      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -55,79 +65,82 @@
     <div style="background-color: black; padding-top: 20px;">
 
 
-        <div id="getintouch" style="margin-bottom: 0px;">
+        <div id="getintouch" >
             <div id="line1">GET IN TOUCH WITH US</div>
             <div id="line2">Have any doubts or suggestions ? Contact us from here </div>
-            <div id="line3">We will surely reply to your message as soon as possible</div>
+            <div id="line2">We will surely reply to your message as soon as possible</div>
         </div>
 
-        <section class="contactt"
-            style="display: flex; padding-top: 15px; margin-left: 90px; background-color: black; color: white;">
+        <section class="contactt">
             <div class="contactform">
                 <form
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScKYQ2dLRfTr-4EvJ1JYeIFKTVNrk6svnl3-WkEEqLt0iW5ng/formResponse">
 
                     <div class="abcd">
-                        <label class="lab" style="font-size: 18px;">Your Name</label>
+                        <label class="lab">Your Name</label>
                         <input type="text" name="entry.2005620554" name="" required placeholder="Your name" style="font-size: 10px;" />
                     </div>
 
                     <div class="abcd">
-                        <label class="lab" style="font-size: 18px;">Your email</label>
+                        <label class="lab">Your email</label>
                         <input type="email" name="entry.1045781291" required placeholder="Your email" style="font-size: 10px;"/>
                     </div>
 
                     <div class="abcd">
-                        <label class="lab" style="font-size: 18px;">Phone Number</label>
+                        <label class="lab">Phone Number</label>
                         <input type="number" name="entry.1166974658" placeholder="Your phone number" style="font-size: 10px;"/>
                     </div>
 
                     <div class="abcd">
-                        <label class="lab" style="font-size: 18px;">Your message</label>
+                        <label class="lab">Your message</label>
                         <textarea name="entry.839337160" placeholder="Your message" style="font-size: 10px;"></textarea>
                     </div>
 
-                    <input type="submit" style="font-size: 16px; margin-left: 20px;"></input>
+                    <input type="submit"></input>
                 </form>
 
             </div>
-            <div class="div2" style="padding-top: 15px;">
+
+            <div class="div2">
                 <div class="info">
-                    <div class="boxx">
+                    <div class="boxx address">
                         <div class="icon">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                         <div class="textt">
                             <h3 class="h33">Address</h3>
-                            <p style="font-size: 14px;letter-spacing: 1px;">Room 15,om sai dham,<br> waylenagar,</p>
+                            <p class="details">Room 15,om sai dham, Plot No. <br>27, Gat No. 35, Muktai Nagar,<br> Behind Datta Temple,<br> Jalgaon-425001<br> waylenagar, <br>Maharashtra</p>
                         </div>
                     </div>
 
-                    <div class="boxx" style="padding-bottom: 8px;">
-                        <div class="icon">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div class="phone-email">
+                        <div class="boxx" style="padding-bottom: 8px;">
+                            <div class="icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="textt">
+                                <h3 class="h33">Phone</h3>
+                                <p  class="details">1234567889</p>
+                            </div>
                         </div>
-                        <div class="textt">
-                            <h3 class="h33">Phone</h3>
-                            <p style="font-size: 14px;letter-spacing: 1px;">1234567889</p>
-                        </div>
-                    </div>
-
-                    <div class="boxx">
-                        <div class="icon">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </div>
-                        <div class="textt">
-                            <h3 class="h33">Email</h3>
-                            <p style="font-size: 14px;letter-spacing: 1px;">sahilkedare@gmail.com</p>
+    
+                        <div class="boxx">
+                            <div class="icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="textt">
+                                <h3 class="h33">Email</h3>
+                                <p class="details">sahilkedare@gmail.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
     <footer>
-        <div class="up">
+        <!-- <div class="up"> -->
         </div>
         <div class="center">
             <ul class=contact id="space">
@@ -145,7 +158,17 @@
             <div>Copyright &copy; www.ChitraKala.com. All rights reserved!</div>
         </div>
     </footer>
-
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+  
 </body>
 
 </html>
