@@ -862,7 +862,9 @@ input[type="range"] {
     padding: 0px;
     width: 100px;
     margin: 18px auto;
+    font-size: 11px;
   }
+ 
 }
 @media only screen and (max-width: 550px) {
   .infohead {
@@ -901,11 +903,11 @@ input[type="range"] {
     height: auto;
   }
   #div1 h2 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bolder;
   }
   #div1 p {
-    font-size: 10px;
+    font-size: 11px;
   }
   .icons {
     width: 10%;
@@ -1360,19 +1362,21 @@ input[type="range"] {
 
 @media only screen and (max-width: 295px){
   canvas{
-    width:85%;
+    width:90%;
     height: 150px;
-  }
-  .rc button{
-    padding-right: 10px;
   }
   .choose button{
     width:70px;
     padding: 0px;
   }
   .cd button{
+    width: 80px;
     font-size: 8px;
-    padding:0px 1px;
+    /* padding:0px 1px; */
+  }
+  .rc button{
+    width: 60px;
+    padding-right: 10px;
   }
   .choose{
     margin-left: 30px;
@@ -1386,7 +1390,8 @@ input[type="range"] {
     width:205px;
   }
 #div1{
-    height:220px;
+    height:250px;
+    width:170px;
   }
   .slideContainer{
     width: 110px;

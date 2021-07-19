@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 body {
   background-color: black;
 }
@@ -26,13 +27,15 @@ html {
 }
 #line1 {
   font-family: "Dancing Script", cursive;
+  /* font-family: 'Ubuntu', sans-serif; */
   font-size: 40px;
   font-weight: 900;
   word-spacing: 5px;
   letter-spacing: 5px;
 }
 #line2 {
-  font-family: cursive;
+  /* font-family: cursive; */
+  font-family: 'Ubuntu', sans-serif;
   font-size: 22px;
   margin: 10px;
 }
@@ -74,17 +77,28 @@ textarea {
   margin-top: 20px;
   padding-top: 15px;
 }
-.icon-logo {
+.icon-ape {
+  min-width: 40px;
+  height: 50px;
+  background: rgb(243, 243, 243);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  clip-path: circle();
+}
+/* .icon{
   min-width: 50px;
   height: 60px;
-  background: rgb(243, 243, 243);
+  background:  rgb(243, 243, 243);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 32px;
   clip-path: circle();
-}
+} */
 .textt {
   font-size: 17px;
   margin-left: 20px;
@@ -103,7 +117,8 @@ input[type="submit"] {
 }
 .contactt {
   margin-top: 70px;
-  font-family: cursive;
+  /* font-family: cursive; */
+  font-family: 'Ubuntu', sans-serif;
 }
 .center {
   text-align: center;
@@ -196,13 +211,15 @@ input[type="submit"] {
   }
   #line1 {
     font-family: "Dancing Script", cursive;
+    /* font-family: 'Ubuntu', sans-serif; */
     font-size: 3.4rem;
     font-weight: 900;
     word-spacing: 5px;
     letter-spacing: 5px;
   }
   #line2 {
-    font-family: cursive;
+    /* font-family: cursive; */
+    font-family: 'Ubuntu', sans-serif;
     font-size: 2rem;
     margin: 10px;
   }
@@ -262,4 +279,60 @@ input[type="submit"] {
      margin-top: 100px;
      margin-bottom: -50px;
    }
+}
+
+@media only screen and (max-width: 565px) {
+
+  .sahil .name,
+  .atharva .name {
+    margin: auto;
+    /* padding-left: 0px; */
+    margin-right: 70px;
+  }
+}
+@media only screen and (max-width: 600px){
+.topnav .icon-bar{
+    /* height: 60px; */
+    /* margin-top: 1px; */
+    padding-top: 15px;
+    margin-right: -20px;
+}
+.topnav{
+  height: 60px;
+}
+.responsive{
+  height: auto;
+}
+}
+@media only screen and (max-width: 600px){
+  #pic {
+    padding-left: 30px;
+    margin-left: -10px;
+    margin-bottom: 3px;
+}
+.topnav a{
+  font-size: 22px;
+}
+.topnav .icon-bar{
+  height: 60px;
+  margin-top: -57px;
+  padding-top: 6px;
+  margin-right: -20px;
+}
+.abcd{
+  width: 70%;
+  margin: auto;
+    padding: 5px;
+}
+input[type="submit"] {
+  padding-bottom: 10px;
+  display: block;
+  width: 15%;
+  margin: auto;
+}
+.icon-ape{
+    min-width: 31px;
+    height: 40px;
+    font-size: 20px;
+}
 }
