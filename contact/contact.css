@@ -184,12 +184,12 @@ input[type="submit"] {
 .contact li {
   width: 8%;
 }
-.up {
+/* .up {
   margin-top: 50px;
   width: 530px;
   margin-left: 500px;
   border: 1px solid rgb(255 255 255);
-}
+} */
 
 ::placeholder {
   font-size: 13px;
@@ -311,7 +311,7 @@ input[type="submit"] {
     margin-bottom: 3px;
 }
 .topnav a{
-  font-size: 22px;
+  font-size: 17px;
 }
 .topnav .icon-bar{
   height: 60px;
