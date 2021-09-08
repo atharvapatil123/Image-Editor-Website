@@ -1,3 +1,7 @@
+<h1>Members:</h1>
+Atharva Patil
+Sahil Kedare
+
 <h1>ABOUT PROJECT:</h1>
 
 Our project topic is an IMAGE EDITOR WEBSITE and we have named it CHITRAKALA . This image editor website consists of 3 different section to which we can navigate with the help of navbar. The three different pages are Home section, About Us section and Contact section.
