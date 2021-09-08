@@ -1,7 +1,8 @@
 <h1>Members:</h1>
-Atharva Patil
-<br>
-Sahil Kedare
+<h3>Atharva Patil</h3>
+<!-- <br> -->
+<h3>Sahil Kedare</h3>
+
 
 <h1>ABOUT PROJECT:</h1>
 
